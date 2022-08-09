@@ -82,7 +82,7 @@ export default function NavBar() {
                       <motion.span
                         initial={{ opacity: 0, y: -100 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1, type: 'spring', bounce: 0.6 }}
+                        transition={{ delay: 0.1 }}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className="hover-underline-animation font-bold"
