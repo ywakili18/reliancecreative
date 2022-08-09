@@ -54,11 +54,13 @@ export default function Home() {
               We help create and build your idea from the ground up.
             </span>
             <p className="mt-5">
-              Located and serving the San Francisco, Silicon Valley, and Bay
-              Area, we are here for your business to achieve
+              Located and serving the San Francisco Bay Area and Silicon Valley,
+              we are here for your business to achieve
               <span className="font-bold"> growth and results</span>.
             </p>
-            <p className="mt-5">That&apos;s our bottom line.</p>
+            <p className="mt-5 hover-underline-animation">
+              That&apos;s our bottom line.
+            </p>
           </motion.h2>
           <motion.h3
             className="text-base md:text-md mt-10 text-stone-400 tracking-[3px] font-light"

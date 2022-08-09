@@ -70,7 +70,7 @@ export default function NavBar() {
             leaveTo="transform scale-y-0 opacity-0"
           >
             <Disclosure.Panel className="">
-              <motion.div className="bg-white h-screen absolute w-screen sm:p-40 p-10 sm:flex sm:justify-between">
+              <motion.div className="bg-white h-screen absolute w-screen sm:p-32 p-10 sm:flex sm:justify-between">
                 <div className="flex flex-col sm:gap-14 gap-8">
                   {navigation.map((item) => (
                     <Disclosure.Button

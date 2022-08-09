@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/test1.png" />
+        <link rel="icon" href="/logo1.png" />
       </Head>
       <NavBar />
 
