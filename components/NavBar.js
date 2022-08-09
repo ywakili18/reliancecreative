@@ -98,11 +98,11 @@ export default function NavBar() {
                 {/* contact section */}
                 <motion.div
                   className="flex flex-col gap-4 sm:mt-20"
-                  initial={{ opacity: 0, x: 100 }}
+                  initial={{ opacity: 0, y: 100 }}
                   //animation of component appearence
-                  animate={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   // how your element will appears f.e(duration in seconds)
-                  transition={{ delay: 0.2, type: 'spring', bounce: 0.6 }}
+                  transition={{ delay: 0.2 }}
                 >
                   {/* icon container */}
                   <div className="text-3xl flex gap-5  transition:all mt-10 sm:mt-0">
