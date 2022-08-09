@@ -1,26 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #fcfcfc;
+}
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
 }
 
-* {
-  box-sizing: border-box;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(35, 147, 35); 
+}
+nav{
+  background-color: #fcfcfc;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+ 
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(.9);
+  transform-origin: bottom left;
+  text-decoration: underline;
+  
 }
