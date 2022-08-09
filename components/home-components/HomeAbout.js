@@ -23,7 +23,7 @@ const HomeAbout = () => {
             agency.
           </p>
           <p>
-            Our team specializes in web development, UI/UX design, SEO, and
+            Our team has expertise in web development, UI/UX design, SEO, and
             branding. We create and assist in building stunning websites that
             drive traffic, engagement, leads, and conversion.
           </p>
