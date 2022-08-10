@@ -124,8 +124,7 @@ export default function NavBar() {
                 <motion.a
                   className="hover:text-green-500 cursor-pointer"
                   variants={itemVariants}
-                  href="https://www.instagram.com/reliancedm"
-                  target="_blank"
+                  href="https://www.instagram.com/reliancecreative"
                 >
                   <AiOutlineInstagram />
                 </motion.a>
@@ -141,7 +140,7 @@ export default function NavBar() {
               </p>{' '}
               <Link href="mailto:reliancedigitalcreative@gmail.com">
                 <motion.a
-                  className="hover:text-red-500 text-lg sm:text-2xl sm:mt-10 mt-2"
+                  className="hover:text-red-500 text-lg sm:text-2xl sm:mt-10 mt-2 cursor-pointer"
                   variants={itemVariants}
                 >
                   reliancedigitalcreative@gmail.com
@@ -149,7 +148,7 @@ export default function NavBar() {
               </Link>
               <Link href="tel:5108707804">
                 <motion.a className="sm:mt-10" variants={itemVariants}>
-                  <Button text={5108707804} />
+                  <Button text={'(510)-870-7804'} />
                 </motion.a>
               </Link>
             </motion.div>{' '}
