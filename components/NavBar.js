@@ -72,7 +72,7 @@ export default function NavBar() {
         {open ? (
           // links container
           <motion.div
-            className="flex flex-col sm:flex-row sm:items-center text-2xl font-bold justify-between sm:p-10 "
+            className="flex flex-col sm:flex-row sm:items-center text-2xl font-bold justify-around sm:p-10 "
             initial={{ height: 0 }}
             animate={{
               height: '80vh'
@@ -112,30 +112,32 @@ export default function NavBar() {
               variants={sideVariants}
             >
               <p className="flex text-3xl sm:text-5xl gap-5 ">
-                <Link href="https://www.facebook.com/">
-                  <motion.a
-                    className="hover:text-green-500"
-                    variants={itemVariants}
-                  >
-                    <AiOutlineFacebook />
-                  </motion.a>
-                </Link>
-                <Link href="https://www.instagram.com/reliancedm">
-                  <motion.a
-                    className="hover:text-green-500"
-                    variants={itemVariants}
-                  >
-                    <AiOutlineInstagram />
-                  </motion.a>
-                </Link>
-                <Link href="https://www.linkedin.com">
-                  <motion.a
-                    className="hover:text-green-500"
-                    variants={itemVariants}
-                  >
-                    <AiOutlineLinkedin />
-                  </motion.a>
-                </Link>
+                <motion.a
+                  className="hover:text-green-500 cursor-pointer"
+                  variants={itemVariants}
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <AiOutlineFacebook />
+                </motion.a>
+
+                <motion.a
+                  className="hover:text-green-500 cursor-pointer"
+                  variants={itemVariants}
+                  href="https://www.instagram.com/reliancedm"
+                  target="_blank"
+                >
+                  <AiOutlineInstagram />
+                </motion.a>
+
+                <motion.a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  className="hover:text-green-500 cursor-pointer"
+                  variants={itemVariants}
+                >
+                  <AiOutlineLinkedin />
+                </motion.a>
               </p>{' '}
               <Link href="mailto:reliancedigitalcreative@gmail.com">
                 <motion.a
