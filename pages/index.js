@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import HomeAbout from '../components/home-components/HomeAbout'
+import HomeServices from '../components/home-components/HomeServices'
 export default function Home() {
   const headers = [
     { name: 'Design' },
@@ -77,6 +78,9 @@ export default function Home() {
       </main>
       <section>
         <HomeAbout />
+      </section>
+      <section>
+        <HomeServices />
       </section>
     </div>
   )

@@ -5,15 +5,15 @@ import Link from 'next/link'
 import Button from '../Button.js'
 const HomeAbout = () => {
   return (
-    <motion.div
-      className="mt-20 text-white bg-lime-200"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-    >
-      {/* side text container */}
+    <div className="mt-20 text-white bg-emerald-200">
       <section className="md:flex gap-32">
-        <div className="w-3/4 sm:w-11/12 sm:ml-10 m-auto">
+        {/* image */}
+        <motion.div
+          className="w-3/4 sm:w-11/12 sm:ml-10 m-auto"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <Image
             src="/elevate.png"
             alt="Picture of rocket, thoughtful branding, reliance digital creative."
@@ -21,30 +21,37 @@ const HomeAbout = () => {
             height={2000}
             layout="intrinsic"
           />
-        </div>
+        </motion.div>
 
         {/* text */}
-        <div className="text-lg md:text-xl lg:text-2xl flex flex-col gap-10 text-black  sm:mt-32 p-10 ml-5 sm:ml-0">
+        <motion.div
+          className="text-lg text-center sm:text-left md:text-xl lg:text-2xl flex flex-col gap-10 text-black  sm:mt-32 p-10  sm:ml-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <p className="text-2xl font-bold sm:text-4xl">
             Your brand, is your business.
           </p>
-          <p>And we&apos;re here to build it.</p>
+          <p>And we&apos;re here to build it.</p>{' '}
           <p>
-            Our team specializes in{' '}
-            <span className="font-bold">
-              full stack web development, ui/ux design, SEO, and branding.
-            </span>{' '}
+            {' '}
             We create and assist in building stunning websites that drive
             traffic, engagement, leads, and conversion.
-          </p>{' '}
-          <Link href="tel:5108707804">
+          </p>
+          <p>
+            Your brand identity is important to us at Reliance Digital Creative.
+            We position your core values and ideas to the forefront, connecting
+            to your clients and ideal audience.
+          </p>
+          <Link href="/contact">
             <a className="">
-              <Button text="Need a redesign or build a site? Give us a call!" />
+              <Button text="Let's chat!" />
             </a>
           </Link>
-        </div>
+        </motion.div>
       </section>
-    </motion.div>
+    </div>
   )
 }
 
