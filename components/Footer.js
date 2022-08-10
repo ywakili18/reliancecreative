@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className="p-4 bg-white shadow md:px-6 md:py-20 ">
@@ -37,10 +37,10 @@ const Footer = () => {
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto :border-gray-700 lg:my-8" />
       <span className="block text-sm text-gray-500 sm:text-center :text-gray-400">
-        © 2022{' '}
-        <a href="/" className="hover:underline">
-          Reliance Digital Creative™
-        </a>
+        © 2022
+        <Link href="/">
+          <a className="hover:underline">Reliance Digital Creative™</a>
+        </Link>
         <p>All Rights Reserved.</p>
       </span>
     </footer>
