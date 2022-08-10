@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 const services = () => {
   return (
-    <div className="bg-green-500 h-screen">
+    <div className="bg-red-500 mt-40 h-screen text-black">
       {' '}
       <Head>
         <title>Services - Reliance Digital</title>

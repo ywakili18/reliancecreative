@@ -1,4 +1,3 @@
-import { Disclosure, Transition } from '@headlessui/react'
 import {
   AiOutlineClose,
   AiOutlineMenu,
@@ -6,139 +5,155 @@ import {
   AiOutlineInstagram,
   AiOutlineLinkedin
 } from 'react-icons/ai'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import Button from './Button'
+import { useState } from 'react'
 const navigation = [
-  { name: 'home', href: '/', number: '01' },
-  { name: 'services', href: '/services', number: '02' },
-  { name: 'contact', href: '/contact', number: '03' },
-  { name: 'about', href: '/about', number: '04' }
+  { name: 'Home', href: '/', number: '01' },
+  { name: 'Services', href: '/services', number: '02' },
+  { name: 'Contact', href: '/contact', number: '03' },
+  { name: 'About', href: '/about', number: '04' }
 ]
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false)
+  const onClick = () => {
+    setOpen(!open)
+  }
+  const sideVariants = {
+    closed: {
+      transition: {
+        staggerChildren: 0.1,
+        staggerDirection: -1
+      }
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.1,
+        staggerDirection: 1
+      }
+    }
+  }
+  const itemVariants = {
+    closed: {
+      opacity: 0
+    },
+    open: { opacity: 1 }
+  }
   return (
-    <Disclosure
-      as="nav"
-      className={'shadow-sm shadow-stone-300 sticky top-0 z-20 '}
-    >
-      {({ open }) => (
-        <motion.div>
-          <div className="flex justify-center sm:hidden ">
-            <Link href="/">
-              <a>
-                {' '}
-                <Image
-                  src="/logo2.png"
-                  width={100}
-                  height={100}
-                  alt="Reliance Digital Creative logo"
-                />
-              </a>
-            </Link>
-          </div>
+    <nav className="top-0  p-10 fixed w-full z-10">
+      {/* icon and ham menu container */}
+      <div className="text-4xl flex justify-between ">
+        <Link href="/">
+          <a>
+            {' '}
+            <Image
+              src="/logo1.png"
+              alt="reliance digital creative"
+              width={100}
+              height={100}
+            />
+          </a>
+        </Link>
 
-          <div className="relative sm:h-40 h-20 ml-10 ">
-            <div className="sm:flex hidden p-4">
-              <Link href="/">
-                <a>
-                  <Image
-                    src="/logo1.png"
-                    height={120}
-                    width={120}
-                    alt="Reliance Digital Creative logo"
-                  />
-                </a>
-              </Link>
-            </div>
-          </div>
-
-          <div className="absolute inset-y-0 top-0 right-0 flex">
-            {/* Mobile menu button*/}
-            <Disclosure.Button className="justify-center p-2 rounded-md text-black transition-all hover:text-green-500 text-3xl">
-              {open ? <AiOutlineClose /> : <AiOutlineMenu />}
-            </Disclosure.Button>
-          </div>
-          {/* mobile menu */}
-          <Transition
-            enter="transition duration-200 ease-out"
-            enterFrom="transform scale-y-0 opacity-0"
-            enterTo="transform  scale-y-100 opacity-100"
-            leave="transition duration-200 ease-out"
-            leaveFrom="transform scale-y-100 opacity-100"
-            leaveTo="transform scale-y-0 opacity-0"
+        <div className="sm:mt-5 mt-7 hover:text-emerald-500 transition-all">
+          {open ? (
+            <AiOutlineClose onClick={onClick} className="cursor-pointer" />
+          ) : (
+            <AiOutlineMenu onClick={onClick} className="cursor-pointer" />
+          )}
+        </div>
+      </div>
+      {/* full sized menu */}
+      <AnimatePresence>
+        {' '}
+        {open ? (
+          // links container
+          <motion.div
+            className="flex flex-col sm:flex-row sm:items-center text-2xl font-bold justify-between sm:p-10 "
+            initial={{ height: 0 }}
+            animate={{
+              height: '80vh'
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              transition: { delay: 0.5, duration: 0.3 }
+            }}
           >
-            <Disclosure.Panel className="">
-              <motion.div className="bg-white h-screen absolute w-screen sm:p-32 p-10 sm:flex sm:justify-between">
-                <div className="flex flex-col sm:gap-14 gap-8">
-                  {navigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      aria-current={item.current ? 'page' : undefined}
-                    >
-                      <motion.span
-                        initial={{ opacity: 0, y: -100 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="hover-underline-animation font-bold"
-                      >
-                        <span className="text-sm mr-2 ">{item.number}</span>
-                        <span className="text-3xl md:text-5xl flex flex-col">
-                          {item.name}
-                        </span>
-                      </motion.span>
-                    </Disclosure.Button>
-                  ))}
-                </div>
-                {/* contact section */}
-                <motion.div
-                  className="flex flex-col gap-4 sm:mt-20"
-                  initial={{ opacity: 0, y: 100 }}
-                  //animation of component appearence
-                  animate={{ opacity: 1, y: 0 }}
-                  // how your element will appears f.e(duration in seconds)
-                  transition={{ delay: 0.2 }}
+            <motion.div
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={sideVariants}
+              className="flex flex-col gap-20 sm:gap-24 mt-auto mb-auto"
+            >
+              {navigation.map((link) => (
+                <Link key={link.name} href={link.href}>
+                  <motion.a
+                    onClick={onClick}
+                    variants={itemVariants}
+                    className="hover-underline-animation cursor-pointer"
+                  >
+                    <p className="text-sm">{link.number}</p>
+                    {link.name}
+                  </motion.a>
+                </Link>
+              ))}
+            </motion.div>
+            {/* contact container */}
+            <motion.div
+              className="flex flex-col"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={sideVariants}
+            >
+              <p className="flex text-3xl sm:text-5xl gap-5 ">
+                <Link href="https://www.facebook.com/">
+                  <motion.a
+                    className="hover:text-green-500"
+                    variants={itemVariants}
+                  >
+                    <AiOutlineFacebook />
+                  </motion.a>
+                </Link>
+                <Link href="https://www.instagram.com/reliancedm">
+                  <motion.a
+                    className="hover:text-green-500"
+                    variants={itemVariants}
+                  >
+                    <AiOutlineInstagram />
+                  </motion.a>
+                </Link>
+                <Link href="https://www.linkedin.com">
+                  <motion.a
+                    className="hover:text-green-500"
+                    variants={itemVariants}
+                  >
+                    <AiOutlineLinkedin />
+                  </motion.a>
+                </Link>
+              </p>{' '}
+              <Link href="mailto:reliancedigitalcreative@gmail.com">
+                <motion.a
+                  className="hover:text-red-500 text-lg sm:text-2xl sm:mt-10 mt-2"
+                  variants={itemVariants}
                 >
-                  {/* icon container */}
-                  <div className="text-3xl flex gap-5  transition:all mt-10 sm:mt-0">
-                    <Link href="https://www.instagram.com/reliancedm/">
-                      <a>
-                        {' '}
-                        <AiOutlineInstagram className="hover:text-green-500 cursor-pointer" />
-                      </a>
-                    </Link>
-                    <Link href="https://www.facebook.com/">
-                      <a>
-                        <AiOutlineFacebook className="hover:text-green-500 cursor-pointer" />
-                      </a>
-                    </Link>
-                    <Link href="https://www.linkedin.com/">
-                      <a>
-                        <AiOutlineLinkedin className="hover:text-green-500 cursor-pointer" />
-                      </a>
-                    </Link>
-                  </div>
-                  <Link href="mailto:reliancedigitalcreative@gmail.com">
-                    <a className="hover:text-green-500 transition:all text-lg ml-.5">
-                      reliancedigitalcreative@gmail.com
-                    </a>
-                  </Link>
-                  <Link href="tel:5108707804">
-                    <a className="">
-                      <Button text=" (510) 870-7804" />
-                    </a>
-                  </Link>
-                </motion.div>
-              </motion.div>
-            </Disclosure.Panel>
-          </Transition>
-        </motion.div>
-      )}
-    </Disclosure>
+                  reliancedigitalcreative@gmail.com
+                </motion.a>
+              </Link>
+              <Link href="tel:5108707804">
+                <motion.a className="sm:mt-10" variants={itemVariants}>
+                  <Button text={5108707804} />
+                </motion.a>
+              </Link>
+            </motion.div>{' '}
+          </motion.div>
+        ) : null}{' '}
+      </AnimatePresence>
+    </nav>
   )
 }
