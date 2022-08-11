@@ -9,7 +9,7 @@ const HomeServices = () => {
       <section className="md:flex gap-32">
         {/* image */}
         <motion.div
-          className="w-3/4 sm:w-11/12 sm:ml-10 m-auto"
+          className="w-3/4 sm:w-11/12 sm:ml-10 m-auto shadow-lg"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -36,7 +36,8 @@ const HomeServices = () => {
           <p>
             Our team specializes in{' '}
             <span className="font-bold">
-              full stack web development, ui/ux design, SEO, and branding.
+              full stack web development, responsive ui/ux design, SEO, and
+              branding.
             </span>
           </p>
           <p>

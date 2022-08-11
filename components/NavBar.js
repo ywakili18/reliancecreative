@@ -58,7 +58,10 @@ export default function NavBar() {
           </a>
         </Link>
 
-        <div className="sm:mt-5 mt-7 hover:text-emerald-500 transition-all">
+        <div
+          className="sm:mt-5 mt-7 hover:text-emerald-400 transition-all
+         hover:bg-stone-500 h-1/2 p-2 rounded-lg text-3xl"
+        >
           {open ? (
             <AiOutlineClose onClick={onClick} className="cursor-pointer" />
           ) : (
@@ -80,7 +83,7 @@ export default function NavBar() {
             exit={{
               height: 0,
               opacity: 0,
-              transition: { delay: 0.5, duration: 0.3 }
+              transition: { delay: 0.3, duration: 0.3 }
             }}
           >
             <motion.div
