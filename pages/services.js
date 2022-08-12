@@ -32,6 +32,7 @@ const services = () => {
     {
       header: 'Branding',
       image: '/branding.png',
+      alt: 'Branding, sunglasses placed in middle of table next to laptop and hat.',
       buttonText:
         'Contact us for more information about our branding services.',
       first:
@@ -49,7 +50,7 @@ const services = () => {
       <Head>
         <title>
           Services | Reliance Digital | Web Design, Development, SEO services |
-          Brand Located in the San Francisco Bay Area | Silicon Valley
+          Branding Located in the San Francisco Bay Area | Silicon Valley
         </title>
         <meta
           name="description"
@@ -59,6 +60,7 @@ const services = () => {
       </Head>
       {/* Main Section */}
       <main className="mt-40">
+        <h1>Our Services.</h1>
         <motion.div
           className="w-full"
           initial={{ opacity: 0 }}
@@ -67,7 +69,7 @@ const services = () => {
         >
           <Image
             src="/servicesHeader.png"
-            alt="test"
+            alt="Our services, reliance digital creative. Pen, Smart Phone, and laptop placed next to each other."
             layout="responsive"
             height={768}
             width={1300}
