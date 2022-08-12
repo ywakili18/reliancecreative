@@ -149,11 +149,13 @@ export default function NavBar() {
                   reliancedigitalcreative@gmail.com
                 </motion.a>
               </Link>
-              <Link href="tel:5108707804">
-                <motion.a className="sm:mt-10" variants={itemVariants}>
-                  <Button text={'(510)-870-7804'} />
-                </motion.a>
-              </Link>
+              <motion.a
+                className="sm:mt-10"
+                variants={itemVariants}
+                href="tel:5108707804"
+              >
+                <Button text={'(510)-870-7804'} />
+              </motion.a>
             </motion.div>{' '}
           </motion.div>
         ) : null}{' '}
