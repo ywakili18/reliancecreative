@@ -91,7 +91,7 @@ export default function NavBar() {
               animate="open"
               exit="closed"
               variants={sideVariants}
-              className="flex flex-col gap-20 sm:gap-24 mt-auto mb-auto text-sm sm:text-2xl"
+              className="flex flex-col gap-10 sm:gap-24 text-sm sm:text-2xl"
             >
               {navigation.map((link) => (
                 <Link key={link.name} href={link.href}>
@@ -114,7 +114,7 @@ export default function NavBar() {
               exit="closed"
               variants={sideVariants}
             >
-              <p className="flex text-2xl sm:text-5xl gap-5 ">
+              <p className="flex text-2xl sm:text-5xl gap-5">
                 <motion.a
                   className="hover:text-green-500 cursor-pointer"
                   variants={itemVariants}
