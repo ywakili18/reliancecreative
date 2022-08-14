@@ -45,7 +45,7 @@ export default function NavBar() {
   return (
     <nav className="top-0 p-5 sm:p-1 fixed w-full z-10 shadow">
       {/* icon and ham menu container */}
-      <div className="text-4xl flex justify-between ">
+      <div className="text-4xl flex justify-between">
         <Link href="/">
           <a>
             {' '}
@@ -141,14 +141,13 @@ export default function NavBar() {
                   <AiOutlineLinkedin />
                 </motion.a>
               </p>{' '}
-              <Link href="mailto:reliancedigitalcreative@gmail.com">
-                <motion.a
-                  className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10 mt-2 cursor-pointer"
-                  variants={itemVariants}
-                >
-                  reliancedigitalcreative@gmail.com
-                </motion.a>
-              </Link>
+              <motion.a
+                className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10 mt-2 cursor-pointer"
+                variants={itemVariants}
+                href="mailto:reliancedigitalcreative@gmail.com"
+              >
+                reliancedigitalcreative@gmail.com
+              </motion.a>
               <motion.a
                 className="sm:mt-10"
                 variants={itemVariants}

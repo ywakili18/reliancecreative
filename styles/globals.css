@@ -7,7 +7,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
-  background-color: #fcfcfc;
+  background-color: white;
 }
 ::-webkit-scrollbar {
   width: 10px;
