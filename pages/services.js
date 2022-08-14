@@ -59,10 +59,10 @@ const services = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       {/* Main Section */}
-      <main className="mt-40">
-        <h1>Our Services.</h1>
+      <main className="mt-20">
+        <h1 className="text-transparent">Our Services.</h1>
         <motion.div
-          className="w-full"
+          className="w-full mt-10 sm:m-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -71,7 +71,7 @@ const services = () => {
             src="/servicesHeader.png"
             alt="Our services, reliance digital creative. Pen, Smart Phone, and laptop placed next to each other."
             layout="responsive"
-            height={768}
+            height={760}
             width={1300}
           />
         </motion.div>

@@ -43,7 +43,7 @@ export default function NavBar() {
     open: { opacity: 1 }
   }
   return (
-    <nav className="top-0  p-10 fixed w-full z-10">
+    <nav className="top-0 p-5 sm:p-1 fixed w-full z-10 shadow">
       {/* icon and ham menu container */}
       <div className="text-4xl flex justify-between ">
         <Link href="/">
@@ -91,7 +91,7 @@ export default function NavBar() {
               animate="open"
               exit="closed"
               variants={sideVariants}
-              className="flex flex-col gap-20 sm:gap-24 mt-auto mb-auto"
+              className="flex flex-col gap-20 sm:gap-24 mt-auto mb-auto text-sm sm:text-2xl"
             >
               {navigation.map((link) => (
                 <Link key={link.name} href={link.href}>
@@ -114,7 +114,7 @@ export default function NavBar() {
               exit="closed"
               variants={sideVariants}
             >
-              <p className="flex text-3xl sm:text-5xl gap-5 ">
+              <p className="flex text-2xl sm:text-5xl gap-5 ">
                 <motion.a
                   className="hover:text-green-500 cursor-pointer"
                   variants={itemVariants}
@@ -143,7 +143,7 @@ export default function NavBar() {
               </p>{' '}
               <Link href="mailto:reliancedigitalcreative@gmail.com">
                 <motion.a
-                  className="hover:text-red-500 text-lg sm:text-2xl sm:mt-10 mt-2 cursor-pointer"
+                  className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10 mt-2 cursor-pointer"
                   variants={itemVariants}
                 >
                   reliancedigitalcreative@gmail.com
