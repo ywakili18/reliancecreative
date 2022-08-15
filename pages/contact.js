@@ -5,6 +5,17 @@ const contact = () => {
   }
   return (
     <div className="mt-40 h-screen sm:w-1/2 m-auto shadow-lg sm:p-10 bg-emerald-50">
+      <Head>
+        <title>
+          Contact | Reliance Digital | Web Design, Development, SEO services |
+          Branding Located in the San Francisco Bay Area | Silicon Valley
+        </title>
+        <meta
+          name="description"
+          content="Contact us: Located in the San Francisco Bay Area, Reliance Digital Creative offers web design and development, SEO, branding and content writing services."
+        />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <div className="sm:flex flex-col text-center">
         <h1 className="text-2xl sm:text-4xl p-2 font-bold">Hi there!</h1>
         <span className="m-auto text-center text-lg">

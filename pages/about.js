@@ -15,7 +15,7 @@ const about = () => {
         </title>
         <meta
           name="description"
-          content="Reliance Digital Creative: About page"
+          content="About us: Located in the San Francisco Bay Area, Reliance Digital Creative offers web design and development, SEO, branding and content writing services."
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
