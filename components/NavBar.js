@@ -149,11 +149,11 @@ export default function NavBar() {
                 reliancedigitalcreative@gmail.com
               </motion.a>
               <motion.a
-                className="sm:mt-10"
+                className="sm:mt-10 hover:text-red-500  text-sm sm:text-2xl"
                 variants={itemVariants}
                 href="tel:5108707804"
               >
-                <Button text={'(510)-870-7804'} />
+                510-870-7804
               </motion.a>
             </motion.div>{' '}
           </motion.div>

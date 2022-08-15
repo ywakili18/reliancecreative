@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <main className="p-8 sm:p-20  lg:flex  md:gap-24  sm:mt-16 mt-40 h-auto ">
         <motion.h1
-          className="text-6xl md:text-7xl font-semibold mt-14 mb-10 sm:mt-40 sm:mb-0 header1  p-10"
+          className="text-6xl md:text-7xl font-semibold mt-14 mb-10 sm:mt-40 sm:mb-0 header1  p-10 bg-emerald-50"
           initial={{ opacity: 0, x: -100 }}
           //animation of component appearence
           animate={{ opacity: 1, x: 0 }}
