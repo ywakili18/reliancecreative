@@ -43,7 +43,7 @@ export default function NavBar() {
     open: { opacity: 1 }
   }
   return (
-    <nav className="top-0 p-5 sm:p-1 fixed w-full z-10 shadow">
+    <nav className="top-0 p-5 sm:px-10  fixed w-full z-10 shadow">
       {/* icon and ham menu container */}
       <div className="text-4xl flex justify-between">
         <Link href="/">
@@ -91,7 +91,7 @@ export default function NavBar() {
               animate="open"
               exit="closed"
               variants={sideVariants}
-              className="flex flex-col gap-10 sm:gap-24 text-sm sm:text-2xl"
+              className="flex flex-col gap-10 sm:gap-24 text-2xl"
             >
               {navigation.map((link) => (
                 <Link key={link.name} href={link.href}>

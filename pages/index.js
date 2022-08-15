@@ -23,19 +23,19 @@ export default function Home() {
           content="Located in the San Francisco Bay Area, Reliance Digital Creative offers web design and development, SEO, branding and content writing services."
         />
       </Head>
-      <main className="p-8 sm:p-20  lg:flex  md:gap-24  sm:mt-16 mt-40 h-[90vh] ">
+      <main className="p-8 sm:p-20  lg:flex  md:gap-24  sm:mt-16 mt-40 h-auto ">
         <motion.h1
-          className="text-5xl md:text-8xl font-semibold mt-14 mb-10 sm:mt-40 sm:mb-0"
+          className="text-6xl md:text-7xl font-semibold mt-14 mb-10 sm:mt-40 sm:mb-0 header1  p-10"
           initial={{ opacity: 0, x: -100 }}
           //animation of component appearence
           animate={{ opacity: 1, x: 0 }}
           // how your element will appears f.e(duration in seconds)
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.5 }}
         >
           {headers.map((header) => (
             <p
               key={header.name}
-              className="font-bold text-transparent  bg-clip-text bg-gradient-to-r from-stone-600 to-lime-700"
+              className="font-bold text-transparent  bg-clip-text bg-gradient-to-r from-emerald-300 to-emerald-500"
             >
               {header.name}
             </p>
