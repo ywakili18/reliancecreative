@@ -19,7 +19,7 @@ const about = () => {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className="mt-48">
+      <main className="mt-24">
         <h1 className="text-transparent">About us</h1>
         <motion.div
           className="w-full"
