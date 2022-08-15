@@ -1,8 +1,4 @@
-/** @type {import('next-sitemap').IConfig} */
-const config = {
-  siteUrl: 'https://reliancedm.com',
-  generateRobotsTxt: true // (optional)
-  // ...other options
+const siteUrl = 'https://www.reliancedm.com'
+module.exports = {
+  siteUrl
 }
-
-export default config
