@@ -1,4 +1,5 @@
 const siteUrl = 'https://www.reliancedm.com'
 module.exports = {
-  siteUrl
+  siteUrl,
+  generateRobotsTxt: true
 }

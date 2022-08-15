@@ -11,7 +11,7 @@ const about = () => {
       <Head>
         <title>
           About | Reliance Digital | Web Design, Development, SEO services |
-          Branding Located in the San Francisco Bay Area | Silicon Valley
+          Branding Located in the San Francisco Bay Area | Silicon Valley.
         </title>
         <meta
           name="description"
