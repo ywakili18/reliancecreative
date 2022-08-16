@@ -37,7 +37,7 @@ const about = () => {
           />
           <h1 className=" text-white text-3xl sm:text-7xl centered">
             About us
-            <div className="sm:text-xl text-xs mt-10">
+            <div className="sm:text-xl text-xs mt-10 tracking-wide">
               <p>We love creating digital experiences.</p>
               <p>
                 Right here, in the heart of the Bay Area and Silicon Valley.
@@ -49,7 +49,7 @@ const about = () => {
           <h2 className="text-2xl sm:text-5xl text-emerald-400 font-bold">
             Who we are
           </h2>
-          <div className="text-sm sm:text-lg mt-5">
+          <div className="text-sm sm:text-lg mt-5 tracking-wide">
             <p className="">
               Reliance Digital Creative, founded in 2021, is located in the San
               Francisco Bay Area, CA. Our team has over 5+ years specializing in
@@ -74,7 +74,7 @@ const about = () => {
             <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
               Satisfaction <VscWorkspaceTrusted className="mt-1 ml-1" />
             </h3>
-            <p className="text-sm sm:text-lg">
+            <p className="text-sm sm:text-lg tracking-wide">
               We are committed to satisfying our clients. Our approach is
               thorough and efficient. We take the time to fully understand each
               client&apos; business needs, audience, and how it operates. Then
@@ -85,7 +85,7 @@ const about = () => {
             <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
               Quality <FiThumbsUp className="mt-1 ml-1" />
             </h3>
-            <p className="text-sm sm:text-lg">
+            <p className="text-sm sm:text-lg tracking-wide">
               We are committed to the best quality for our clients. Each digital
               experience is built with thought of scale, responsive for any
               device, and efficiently deliver the product on time.
@@ -93,7 +93,7 @@ const about = () => {
             <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
               Integrity <FaRegHandshake className="mt-1 ml-1" />
             </h3>
-            <p className="text-sm sm:text-lg">
+            <p className="text-sm sm:text-lg tracking-wide">
               We are committed to respect, trust, and holding ourselves
               accountable to the highest standard. Honesty and transparency is
               incredibly important to us at Reliance Digital Creative - to
