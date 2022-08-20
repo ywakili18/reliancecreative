@@ -115,31 +115,32 @@ export default function NavBar() {
               variants={sideVariants}
             >
               <p className="flex text-2xl sm:text-5xl gap-5">
-                <motion.a
+                {/* <motion.a
                   className="hover:text-green-500 cursor-pointer"
                   variants={itemVariants}
                   href="https://www.facebook.com/"
                   target="_blank"
                 >
                   <AiOutlineFacebook />
-                </motion.a>
+                </motion.a> */}
 
                 <motion.a
-                  className="hover:text-green-500 cursor-pointer"
+                  className="hover:text-green-500 cursor-pointer flex gap-2 text-sm sm:text-2xl"
                   variants={itemVariants}
                   href="https://www.instagram.com/reliancecreative"
                 >
-                  <AiOutlineInstagram />
+                  Check out our instagram{' '}
+                  <AiOutlineInstagram className="mt-1" />
                 </motion.a>
 
-                <motion.a
+                {/* <motion.a
                   href="https://www.linkedin.com"
                   target="_blank"
                   className="hover:text-green-500 cursor-pointer"
                   variants={itemVariants}
                 >
                   <AiOutlineLinkedin />
-                </motion.a>
+                </motion.a> */}
               </p>{' '}
               <motion.a
                 className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10 mt-2 cursor-pointer"

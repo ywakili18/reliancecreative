@@ -25,7 +25,7 @@ const HomeAbout = () => {
 
         {/* text */}
         <motion.div
-          className="text-lg text-center sm:text-left md:text-xl lg:text-2xl flex flex-col gap-10 text-black  sm:mt-32 p-10  sm:ml-0"
+          className="text-lg text-left md:text-xl lg:text-2xl flex flex-col gap-10 text-black  sm:mt-32 p-10  sm:ml-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
