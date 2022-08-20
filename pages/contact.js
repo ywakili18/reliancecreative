@@ -36,8 +36,6 @@ const contact = () => {
       >
         <div className="flex flex-col md:gap-6 mt-10">
           <input type="text" name="_honey" style={divStyle} />
-          {/* disable captch */}
-          <input style={divStyle} name="_captcha" value="false" />
         </div>
         <div className="md:gap-6">
           <div className="relative z-0 mb-6 w-full group">
