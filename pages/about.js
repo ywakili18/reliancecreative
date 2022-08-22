@@ -46,7 +46,7 @@ const about = () => {
           </h1>
         </motion.div>
         <motion.div className=" text-black h-auto md:w-1/2 m-auto p-10 md:p-20">
-          <h2 className="text-2xl sm:text-5xl text-emerald-400 font-bold">
+          <h2 className="text-2xl sm:text-5xl text-emerald-400 font-bold space">
             Who we are
           </h2>
           <div className="text-sm sm:text-lg mt-5 tracking-wide">
@@ -58,16 +58,15 @@ const about = () => {
               sites to establish businesses and brands digitally.
             </p>
             <p className="mt-5">
-              We have experience developing wordpress, webflow, and fully custom
-              sites that tailors to your business needs. Each site is also
-              optimized for SEO and accessibility, ensuring your brand is
-              reached to your clients effectively, increasing your engagement,
-              sales, and profits.
+              We develop and design webflow and fully custom sites that tailors
+              to your business needs. Each site is also optimized for SEO and
+              accessibility, ensuring your brand is reached to your clients
+              effectively, increasing your engagement, sales, and profits.
             </p>
           </div>
         </motion.div>
         <motion.div className="bg-emerald-50 text-black h-auto sm:p-10">
-          <h2 className="text-center text-3xl sm:text-5xl text-emerald-400 font-bold p-10">
+          <h2 className="text-center text-3xl sm:text-5xl text-emerald-400 font-bold p-10 space">
             Our values
           </h2>
           <div className="flex flex-col w-3/4 m-auto gap-5">
@@ -77,9 +76,9 @@ const about = () => {
             <p className="text-sm sm:text-lg tracking-wide">
               We are committed to satisfying our clients. Our approach is
               thorough and efficient. We take the time to fully understand each
-              client&apos; business needs, audience, and how it operates. Then
+              client&apos;s business needs, audience, and how it operates. Then
               we strategize and plan for executing site and brand launch.
-              Finally we launch the final product and look to evolving the brand
+              Finally we launch the final product and look to evolve the brand
               for the future.
             </p>
             <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
@@ -87,7 +86,7 @@ const about = () => {
             </h3>
             <p className="text-sm sm:text-lg tracking-wide">
               We are committed to the best quality for our clients. Each digital
-              experience is built with thought of scale, responsive for any
+              experience is built with thought of scale, responsiveness for any
               device, and efficiently deliver the product on time.
             </p>
             <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
