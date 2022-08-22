@@ -57,7 +57,7 @@ export default function NavBar() {
             />
           </a>
         </Link>
-        <div className="sm:flex text-2xl  items-center gap-20 hidden">
+        <div className="md:flex text-2xl  items-center gap-20 hidden">
           {' '}
           {navigation.map((link) => (
             <Link key={link.name} href={link.href}>
@@ -70,7 +70,7 @@ export default function NavBar() {
         </div>
         {/*  mobile menu */}
         <div
-          className="sm:mt-5 mt-7 hover:text-emerald-400 transition-all sm:hidden
+          className="sm:mt-5 mt-7 hover:text-emerald-400 transition-all md:hidden
          hover:bg-stone-500 h-1/2 p-2 rounded-lg text-3xl"
         >
           {open ? (

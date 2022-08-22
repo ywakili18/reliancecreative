@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Button from '../Button.js'
 const HomeAbout = () => {
   return (
-    <div className="mt-20 text-white bg-emerald-200 p-20">
+    <div className="mt-20 text-white bg-emerald-200 sm:p-20">
       <section className="md:flex gap-32">
         {/* image */}
         <motion.div
