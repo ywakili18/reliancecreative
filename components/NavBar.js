@@ -43,7 +43,7 @@ export default function NavBar() {
     open: { opacity: 1 }
   }
   return (
-    <nav className="top-0 p-5 sm:px-10  fixed w-full z-10 shadow">
+    <nav className="top-0 p-5 sm:px-10  fixed w-full z-10 shadow space">
       {/* icon and ham menu container */}
       <div className="text-4xl flex justify-between">
         <Link href="/">
@@ -57,9 +57,20 @@ export default function NavBar() {
             />
           </a>
         </Link>
-
+        <div className="sm:flex text-2xl  items-center gap-20 hidden">
+          {' '}
+          {navigation.map((link) => (
+            <Link key={link.name} href={link.href}>
+              <motion.a className="hover-underline-animation cursor-pointer">
+                <p className="text-sm">{link.number}</p>
+                {link.name}
+              </motion.a>
+            </Link>
+          ))}
+        </div>
+        {/*  mobile menu */}
         <div
-          className="sm:mt-5 mt-7 hover:text-emerald-400 transition-all
+          className="sm:mt-5 mt-7 hover:text-emerald-400 transition-all sm:hidden
          hover:bg-stone-500 h-1/2 p-2 rounded-lg text-3xl"
         >
           {open ? (

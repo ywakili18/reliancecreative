@@ -35,7 +35,7 @@ const about = () => {
             priority
             className="brightness-50"
           />
-          <h1 className=" text-white text-3xl sm:text-7xl centered">
+          <h1 className=" text-white text-3xl sm:text-7xl centered space">
             About us
             <div className="sm:text-xl text-xs mt-10 tracking-wide">
               <p>We love creating digital experiences.</p>

@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <main className="p-8 sm:p-20  lg:flex  md:gap-24  sm:mt-16 mt-40 h-auto ">
         <motion.h1
-          className="text-left flex items-center text-5xl md:text-7xl font-semibold mt-14 mb-10 sm:mt-40 sm:mb-0 header1  p-10 bg-emerald-50 text-lime-600"
+          className="text-left flex items-center text-5xl md:text-7xl font-semibold mt-14 mb-10  sm:mb-0  p-10 space text-emerald-500"
           initial={{ opacity: 0, x: -100 }}
           //animation of component appearence
           animate={{ opacity: 1, x: 0 }}
@@ -47,15 +47,13 @@ export default function Home() {
             transition={{ delay: 1.5 }}
           >
             <span>
-              <span className="font-bold">
-                Web Development, Web Design, SEO, Branding.
-              </span>{' '}
-              We help create and build your idea from the ground up.
+              Web Development, Web Design, SEO, Branding. We help create and
+              build your idea from the ground up.
             </span>
             <p className="mt-5">
               Located and serving the San Francisco Bay Area and Silicon Valley,
               we are here for your business to achieve
-              <span className="font-bold"> growth and results</span>.
+              <span> growth and results</span>.
             </p>
             <p className="mt-5 hover-underline-animation">
               That&apos;s our bottom line.

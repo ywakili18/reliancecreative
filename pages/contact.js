@@ -17,7 +17,7 @@ const contact = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="sm:flex flex-col text-center">
-        <h1 className="text-2xl sm:text-4xl p-2 font-bold">Hi there!</h1>
+        <h1 className="text-2xl sm:text-4xl p-2 font-bold space">Hi there!</h1>
         <span className="m-auto text-center text-lg">
           Fill out the form below or
           <a

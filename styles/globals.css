@@ -6,8 +6,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Mono', monospace;
   background-color: white;
+}
+.space{
+  font-family: 'Space Grotesk', sans-serif;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -52,9 +55,7 @@ nav{
   text-decoration: underline;
   
 }
-.header1{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
+
 .centered {
   position: absolute;
   top: 50%;

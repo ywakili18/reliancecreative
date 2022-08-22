@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Button from '../Button.js'
 const HomeServices = () => {
   return (
-    <div className=" bg-emerald-300">
+    <div className=" bg-emerald-300 p-20">
       <section className="md:flex gap-32">
         {/* image */}
         <motion.div
@@ -29,7 +29,7 @@ const HomeServices = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <p className="text-2xl font-bold sm:text-4xl">
+          <p className="text-2xl font-bold sm:text-4xl space">
             A digital world can be difficult to maneuver.
           </p>
           <p>We make it easy for you.</p>

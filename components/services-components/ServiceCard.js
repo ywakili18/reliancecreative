@@ -23,9 +23,7 @@ const ServiceCard = ({
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <h2 className="text-xl font-bold sm:text-4xl underline p-2">
-          {header}
-        </h2>
+        <h2 className="text-xl font-bold sm:text-4xl  p-2 space">{header}</h2>
         <div className="flex flex-col  gap-5 lg:w-3/4 sm:text-lg text-sm">
           <p>{first}</p>
           <p>{second}</p>
