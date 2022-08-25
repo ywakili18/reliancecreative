@@ -25,7 +25,10 @@ export default function Home() {
       </Head>
       <main className="p-8 sm:p-20  lg:flex  md:gap-24  sm:mt-16 mt-40 h-auto ">
         <motion.h1
-          className="text-left flex items-center text-5xl md:text-7xl font-semibold mt-14 mb-10  sm:mb-0  p-10 space text-emerald-500"
+          className="text-left flex items-center text-5xl 
+          md:text-7xl font-semibold mt-14 mb-10  sm:mb-0 
+           space 
+           bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-600 text-transparent"
           initial={{ opacity: 0, x: -100 }}
           //animation of component appearence
           animate={{ opacity: 1, x: 0 }}
@@ -35,7 +38,7 @@ export default function Home() {
           Design. Develop. Optimize.
         </motion.h1>
         {/* main section */}
-        <div className="sm:mt-40 mt-24">
+        <div className="sm:mt-40 mt-10">
           <motion.h2
             className="text-lg md:text-2xl mt-5"
             initial={{ opacity: 0 }}

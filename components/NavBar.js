@@ -80,14 +80,13 @@ export default function NavBar() {
           )}
         </div>
       </div>
-      {/* full sized menu */}
       <AnimatePresence>
         {' '}
         {open ? (
           // links container
           <motion.div
-            className="flex flex-col sm:flex-row sm:items-center text-2xl font-bold justify-around "
             initial={{ height: 0 }}
+            className=" flex sm:hidden flex-col sm:flex-row sm:items-center text-2xl font-bold sm:justify-around justify-evenly"
             animate={{
               height: '80vh'
             }}
@@ -102,14 +101,14 @@ export default function NavBar() {
               animate="open"
               exit="closed"
               variants={sideVariants}
-              className="flex flex-col gap-10 sm:gap-24 text-2xl"
+              className="flex flex-col gap-10 text-2xl"
             >
               {navigation.map((link) => (
                 <Link key={link.name} href={link.href}>
                   <motion.a
                     onClick={onClick}
                     variants={itemVariants}
-                    className="hover-underline-animation cursor-pointer"
+                    className=" cursor-pointer"
                   >
                     <p className="text-sm">{link.number}</p>
                     {link.name}
@@ -119,7 +118,7 @@ export default function NavBar() {
             </motion.div>
             {/* contact container */}
             <motion.div
-              className="flex flex-col"
+              className="flex flex-col gap-2"
               initial="closed"
               animate="open"
               exit="closed"
@@ -154,11 +153,11 @@ export default function NavBar() {
                 </motion.a> */}
               </p>{' '}
               <motion.a
-                className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10 mt-2 cursor-pointer"
+                className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10  cursor-pointer"
                 variants={itemVariants}
                 href="mailto:reliancedigitalcreative@gmail.com"
               >
-                reliancedigitalcreative@gmail.com
+                Contact us
               </motion.a>
               <motion.a
                 className="sm:mt-10 hover:text-red-500  text-sm sm:text-2xl"

@@ -27,17 +27,16 @@ const about = () => {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/lol.jpg"
+            src="/bayarea.jpg"
             alt="About us. City background"
             layout="responsive"
             height={2000}
             width={4000}
-            priority
             className="brightness-50"
           />
-          <h1 className=" text-white text-3xl sm:text-7xl centered space">
+          <h1 className=" text-white text-3xl sm:text-7xl centered space font-bold">
             About us
-            <div className="sm:text-xl text-xs mt-10 tracking-wide">
+            <div className="sm:text-xl text-xs mt-10 tracking-wide font-thin">
               <p>We love creating digital experiences.</p>
               <p>
                 Right here, in the heart of the Bay Area and Silicon Valley.
