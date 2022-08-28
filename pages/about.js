@@ -51,10 +51,10 @@ const about = () => {
           <div className="text-sm sm:text-lg mt-5 tracking-wide">
             <p className="">
               Reliance Digital Creative, founded in 2021, is located in the San
-              Francisco Bay Area, CA. Our team has over 5+ years specializing in
-              creating interactive experiences on the web - we simply love what
-              we do. Our focus is building scalable, high quality, responsive
-              sites to establish businesses and brands digitally.
+              Francisco Bay Area, CA. Our team has over 10+ years specializing
+              in creating interactive experiences on the web - we simply love
+              what we do. Our focus is building scalable, high quality,
+              responsive sites to establish businesses and brands digitally.
             </p>
             <p className="mt-5">
               We develop and design webflow and fully custom sites that tailors

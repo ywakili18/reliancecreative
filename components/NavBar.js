@@ -85,8 +85,8 @@ export default function NavBar() {
         {open ? (
           // links container
           <motion.div
-            initial={{ height: 0 }}
             className=" flex sm:hidden flex-col sm:flex-row sm:items-center text-2xl font-bold sm:justify-around justify-evenly"
+            initial={{ height: 0 }}
             animate={{
               height: '80vh'
             }}
