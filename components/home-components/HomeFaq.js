@@ -63,7 +63,7 @@ const HomeFaq = () => {
           className="flex flex-col gap-2 mt-2 text-sm sm:text-lg"
           onClick={() => handleClick(item)}
         >
-          <p className="font-bold flex shadow bg-gray-100 rounded justify-between p-5 cursor-pointer">
+          <p className="font-bold flex flex-col gap-3 sm:flex-row shadow bg-gray-100 rounded justify-between p-5 cursor-pointer">
             {detail.question}{' '}
             {show === item ? (
               <AiFillCloseCircle className="text-3xl text-red-500" />
