@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Image from 'next/image'
 import ServiceCard from '../components/services-components/ServiceCard'
 const services = () => {
@@ -59,21 +58,31 @@ const services = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       {/* Main Section */}
-      <main className="mt-20">
+      <main className="mt-28">
         <h1 className="text-transparent">Our Services.</h1>
+        {/* image container */}
         <motion.div
-          className="w-full mt-10 sm:m-0"
+          className="relative"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <Image
-            src="/servicesHeader.png"
-            alt="Our services, reliance digital creative. Pen, Smart Phone, and laptop placed next to each other."
+            src="/modern.jpg"
+            alt="About us. City background"
             layout="responsive"
-            height={760}
-            width={1300}
+            height={600}
+            width={1200}
+            priority
+            className="brightness-50"
           />
+          <h1 className=" text-white text-3xl sm:text-7xl centered space font-bold">
+            Our Services
+            <div className="sm:text-xl text-xs mt-10 tracking-wide font-thin">
+              <p>Web Design, Web Development, SEO Optimization, Branding.</p>
+              <p>Let&apos;s collaborate.</p>
+            </div>
+          </h1>
         </motion.div>
         {cardInfo.map((card) => (
           <div key={card.header}>

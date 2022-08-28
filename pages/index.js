@@ -3,13 +3,9 @@ import { motion } from 'framer-motion'
 import HomeAbout from '../components/home-components/HomeAbout'
 import HomeServices from '../components/home-components/HomeServices'
 import HomeFooter from '../components/home-components/HomeFooter'
+import HomeFaq from '../components/home-components/HomeFaq'
 import Link from 'next/link'
 export default function Home() {
-  const headers = [
-    { name: 'Design' },
-    { name: 'Develop' },
-    { name: 'Optimize' }
-  ]
   return (
     // fixed position of "scroll" causes issues with height
     <div>
@@ -50,8 +46,10 @@ export default function Home() {
             transition={{ delay: 1.5 }}
           >
             <span>
-              Web Development, Web Design, SEO, Branding. We help create and
-              build your idea from the ground up.
+              <span className="font-bold ">
+                Web Development, Web Design, SEO, Branding.
+              </span>{' '}
+              We help create and build your idea from the ground up.
             </span>
             <p className="mt-5">
               Located and serving the San Francisco Bay Area and Silicon Valley,
@@ -70,7 +68,7 @@ export default function Home() {
             </div>
           </motion.h2>
           <motion.h3
-            className="text-base md:text-md mt-10 text-stone-400 tracking-[3px] font-light"
+            className="text-base md:text-md mt-10 text-stone-900 tracking-[3px] font-light"
             initial={{ y: -100 }}
             //animation of component appearence
             animate={{
@@ -87,6 +85,9 @@ export default function Home() {
       </section>
       <section>
         <HomeServices />
+      </section>
+      <section>
+        <HomeFaq />
       </section>
       <section>
         {' '}

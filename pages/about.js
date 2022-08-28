@@ -22,9 +22,9 @@ const about = () => {
       <main className="mt-32">
         <motion.div
           className="relative"
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <Image
             src="/bayarea.jpg"

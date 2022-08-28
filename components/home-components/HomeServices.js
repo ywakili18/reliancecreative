@@ -19,7 +19,7 @@ const HomeServices = () => {
             alt="Picture of rocket, thoughtful branding, reliance digital creative."
             width={1000}
             height={2000}
-            layout="intrinsic"
+            layout="responsive"
           />
         </motion.div>
         {/* text */}

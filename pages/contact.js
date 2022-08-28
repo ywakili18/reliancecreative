@@ -4,7 +4,7 @@ const contact = () => {
     display: 'none'
   }
   return (
-    <div className="mt-40 h-screen sm:w-1/2 m-auto shadow-lg sm:p-10 bg-emerald-50">
+    <div className="mt-40  sm:w-1/2 m-auto shadow-lg sm:p-10 bg-emerald-50">
       <Head>
         <title>
           Contact | Reliance Digital | Web Design, Development, SEO services |

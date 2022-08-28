@@ -133,16 +133,6 @@ export default function NavBar() {
                 >
                   <AiOutlineFacebook />
                 </motion.a> */}
-
-                <motion.a
-                  className="hover:text-green-500 cursor-pointer flex gap-2 text-sm sm:text-2xl"
-                  variants={itemVariants}
-                  href="https://www.instagram.com/reliancecreative"
-                >
-                  Check out our instagram{' '}
-                  <AiOutlineInstagram className="mt-1" />
-                </motion.a>
-
                 {/* <motion.a
                   href="https://www.linkedin.com"
                   target="_blank"
@@ -153,20 +143,27 @@ export default function NavBar() {
                 </motion.a> */}
               </p>{' '}
               <motion.a
-                className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10  cursor-pointer"
+                className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10  cursor-pointer underline text-emerald-500"
                 variants={itemVariants}
                 href="mailto:reliancedigitalcreative@gmail.com"
               >
-                Contact us
+                reliancedigitalcreative@gmail.com
               </motion.a>
               <motion.a
-                className="sm:mt-10 hover:text-red-500  text-sm sm:text-2xl"
+                className="sm:mt-10 hover:text-red-500  text-sm sm:text-2xl underline text-emerald-500"
                 variants={itemVariants}
                 href="tel:5108707804"
               >
                 510-870-7804
               </motion.a>
-            </motion.div>{' '}
+              <motion.a
+                className="hover:text-green-500 cursor-pointer flex gap-2 text-sm sm:text-2xl"
+                variants={itemVariants}
+                href="https://www.instagram.com/reliancecreative"
+              >
+                Check out our instagram <AiOutlineInstagram className="mt-1" />
+              </motion.a>
+            </motion.div>
           </motion.div>
         ) : null}{' '}
       </AnimatePresence>

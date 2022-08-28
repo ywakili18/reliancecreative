@@ -16,7 +16,7 @@ const HomeAbout = () => {
         >
           <Image
             src="/elevate.png"
-            alt="Picture of rocket, thoughtful branding, reliance digital creative."
+            alt="3D shape, depicting waves."
             width={1000}
             height={2000}
             layout="intrinsic"
