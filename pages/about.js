@@ -19,7 +19,7 @@ const about = () => {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className="mt-32">
+      <main className="mt-28">
         <motion.div
           className="relative"
           initial={{ opacity: 0 }}

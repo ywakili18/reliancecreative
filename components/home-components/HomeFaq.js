@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import React from 'react'
 import { useState } from 'react'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs'
-import { AiFillCloseCircle } from 'react-icons/ai'
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/Md'
+
 const details = [
   {
     id: 0,
@@ -53,40 +53,50 @@ const HomeFaq = () => {
     setShow(i)
   }
   return (
-    <div className="mt-10 mb-10 sm:w-3/4 m-auto p-10 sm:p-0">
-      <h2 className="text-center sm:text-left text-2xl sm:text-5xl space mb-10">
+    <div className="sm:w-3/4 m-auto sm:p-10 text-white">
+      <h2
+        className="text-center sm:text-left text-2xl sm:text-5xl 
+      space border-b border-gray-700 py-6"
+      >
         Frequently Asked Questions
       </h2>
       {details.map((detail, item) => (
         <div
           key={detail.id}
-          className="flex flex-col gap-2 mt-2 text-sm sm:text-lg"
+          className="flex flex-col  text-sm sm:text-lg"
           onClick={() => handleClick(item)}
         >
-          <p className="font-bold flex flex-col gap-3 sm:flex-row shadow bg-gray-100 rounded justify-between p-5 cursor-pointer">
-            {detail.question}{' '}
+          <p
+            className="font-bold flex 
+          sm:flex-row  shadow bg-black border-b border-gray-700 
+          justify-around sm:justify-between p-2 sm:p-6 cursor-pointer mt-2 transition-all hover:bg-gray-700"
+          >
+            <span className="text-sm w-3/4">{detail.question} </span>
             {show === item ? (
-              <AiFillCloseCircle className="text-3xl text-red-500" />
+              <MdKeyboardArrowUp className="text-3xl text-red-500" />
             ) : (
-              <BsFillArrowRightCircleFill className="text-2xl text-emerald-500" />
+              <MdKeyboardArrowDown className="text-2xl text-emerald-500 " />
             )}
           </p>
           {show === item ? (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  duration: 0.5
-                }
-              }}
-              exit={{ opacity: 0 }}
-              className="text-sm flex flex-col gap-2 sm:text-lg bg-emerald-100 p-5 font-light"
-            >
-              <p>{detail.answer}</p>
-              <p>{detail.answer2}</p>
-              <p>{detail.answer3}</p>
-            </motion.div>
+            <AnimatePresence>
+              <motion.div
+                key="modal"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5
+                  }
+                }}
+                className="text-sm flex flex-col gap-2 sm:text-lg p-5 font-light text-white"
+              >
+                <p>{detail.answer}</p>
+                <p>{detail.answer2}</p>
+                <p>{detail.answer3}</p>
+              </motion.div>
+            </AnimatePresence>
           ) : (
             ''
           )}

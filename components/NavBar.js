@@ -1,15 +1,13 @@
 import {
   AiOutlineClose,
   AiOutlineMenu,
-  AiOutlineFacebook,
-  AiOutlineInstagram,
-  AiOutlineLinkedin
+  AiOutlineInstagram
 } from 'react-icons/ai'
+import { FaTiktok } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import Button from './Button'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 const navigation = [
   { name: 'Home', href: '/', number: '01' },
   { name: 'Services', href: '/services', number: '02' },
@@ -18,10 +16,28 @@ const navigation = [
 ]
 
 export default function NavBar() {
+  const [scrollY, setScrollY] = useState(0)
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+
+    handleScroll()
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll())
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scrollY])
+
   const [open, setOpen] = useState(false)
+
   const onClick = () => {
     setOpen(!open)
   }
+
   const sideVariants = {
     closed: {
       transition: {
@@ -42,15 +58,22 @@ export default function NavBar() {
     },
     open: { opacity: 1 }
   }
+  const handleMenu = () => {
+    if (scrollY > 500) {
+      return 'bg-black bg-opacity-90 nav-bar'
+    } else {
+      return 'nav-bar'
+    }
+  }
+
   return (
-    <nav className="top-0 p-5 sm:px-10  fixed w-full z-10 shadow space">
+    <nav className={handleMenu()}>
       {/* icon and ham menu container */}
-      <div className="text-4xl flex justify-between">
+      <div className="text-4xl flex justify-between items-center mt-2 p-2 space">
         <Link href="/">
-          <a>
-            {' '}
+          <a className="mt-2">
             <Image
-              src="/logo1.png"
+              src="/logo.png"
               alt="reliance digital creative"
               width={100}
               height={100}
@@ -58,7 +81,6 @@ export default function NavBar() {
           </a>
         </Link>
         <div className="md:flex text-2xl  items-center gap-20 hidden">
-          {' '}
           {navigation.map((link) => (
             <Link key={link.name} href={link.href}>
               <motion.a className="hover-underline-animation cursor-pointer">
@@ -68,27 +90,38 @@ export default function NavBar() {
             </Link>
           ))}
         </div>
-        {/*  mobile menu */}
+
         <div
-          className="sm:mt-5 mt-7 hover:text-emerald-400 transition-all md:hidden
-         hover:bg-stone-500 h-1/2 p-2 rounded-lg text-3xl"
+          className="md:hidden
+          p-2 rounded-lg text-3xl"
         >
           {open ? (
-            <AiOutlineClose onClick={onClick} className="cursor-pointer" />
+            <AiOutlineClose
+              onClick={onClick}
+              className="cursor-pointer text-white"
+            />
           ) : (
-            <AiOutlineMenu onClick={onClick} className="cursor-pointer" />
+            <AiOutlineMenu
+              onClick={onClick}
+              className="cursor-pointer text-white "
+            />
           )}
         </div>
       </div>
+      {/* Mobile menu  */}
       <AnimatePresence>
         {' '}
         {open ? (
           // links container
           <motion.div
-            className=" flex sm:hidden flex-col sm:flex-row sm:items-center text-2xl font-bold sm:justify-around justify-evenly"
+            className="
+             p-4
+             md:hidden
+             bg-black
+             bg-opacity-90 text-white"
             initial={{ height: 0 }}
             animate={{
-              height: '80vh'
+              height: '100vh'
             }}
             exit={{
               height: 0,
@@ -101,7 +134,7 @@ export default function NavBar() {
               animate="open"
               exit="closed"
               variants={sideVariants}
-              className="flex flex-col gap-10 text-2xl"
+              className="flex flex-col gap-10 text-3xl"
             >
               {navigation.map((link) => (
                 <Link key={link.name} href={link.href}>
@@ -118,50 +151,40 @@ export default function NavBar() {
             </motion.div>
             {/* contact container */}
             <motion.div
-              className="flex flex-col gap-2"
+              className="flex flex-col gap-3 mt-10 border-t border-gray-600 text-xl"
               initial="closed"
               animate="open"
               exit="closed"
               variants={sideVariants}
             >
-              <p className="flex text-2xl sm:text-5xl gap-5">
-                {/* <motion.a
-                  className="hover:text-green-500 cursor-pointer"
-                  variants={itemVariants}
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                >
-                  <AiOutlineFacebook />
-                </motion.a> */}
-                {/* <motion.a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  className="hover:text-green-500 cursor-pointer"
-                  variants={itemVariants}
-                >
-                  <AiOutlineLinkedin />
-                </motion.a> */}
-              </p>{' '}
               <motion.a
-                className="hover:text-red-500 text-sm sm:text-2xl sm:mt-10  cursor-pointer underline text-emerald-500"
+                className="hover:text-red-500  sm:mt-10  cursor-pointer underline text-emerald-500"
                 variants={itemVariants}
                 href="mailto:reliancedigitalcreative@gmail.com"
               >
                 reliancedigitalcreative@gmail.com
               </motion.a>
               <motion.a
-                className="sm:mt-10 hover:text-red-500  text-sm sm:text-2xl underline text-emerald-500"
+                className="sm:mt-10 hover:text-red-500 underline text-emerald-500"
                 variants={itemVariants}
                 href="tel:5108707804"
               >
                 510-870-7804
               </motion.a>
               <motion.a
-                className="hover:text-green-500 cursor-pointer flex gap-2 text-sm sm:text-2xl"
+                className="hover:text-green-500 cursor-pointer flex gap-2 "
                 variants={itemVariants}
                 href="https://www.instagram.com/reliancecreative"
               >
-                Check out our instagram <AiOutlineInstagram className="mt-1" />
+                Instagram
+                <AiOutlineInstagram className="mt-1" />
+              </motion.a>
+              <motion.a
+                className="hover:text-green-500 cursor-pointer flex gap-2"
+                variants={itemVariants}
+                href="https://www.tiktok.com/@reliancedigitalcreative"
+              >
+                TikTok <FaTiktok className="mt-1" />
               </motion.a>
             </motion.div>
           </motion.div>

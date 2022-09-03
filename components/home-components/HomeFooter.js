@@ -1,12 +1,12 @@
-import React from 'react'
-import Link from 'next/link'
-import Button from '../Button'
 const HomeFooter = () => {
   return (
-    <div className="text-center bg-emerald-100 p-10">
+    <div className="text-center bg-black text-white p-10">
       <p>Have questions?</p>
-      <a href="tel:5108707804">
-        <Button text="Call us for a free consultation today!" />
+      <a
+        href="tel:5108707804"
+        className="text-red-500 underline sm:text-2xl hover:text-rose-600 transition-all"
+      >
+        Call us for a free consultation today
       </a>
     </div>
   )

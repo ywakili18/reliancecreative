@@ -5,8 +5,9 @@ import ServiceCard from '../components/services-components/ServiceCard'
 const services = () => {
   const cardInfo = [
     {
+      id: 'design',
       header: 'Web Design and Development',
-      image: '/webdesign.png',
+      image: '/people.jpg',
       alt: 'Picture of monitor displaying web design',
       buttonText: 'Contact us for more information about our web services.',
       first:
@@ -17,6 +18,7 @@ const services = () => {
         'Whether you need a quick redesign, assistance with your site, or build a fully custom page - we are here for you and your needs.'
     },
     {
+      id: 'seo',
       header: 'SEO and Content',
       image: '/seo.png',
       alt: 'Search bar with the text "Search", laptop and coffee cup',
@@ -29,6 +31,7 @@ const services = () => {
         'We are here to place your business at the top with competition analysis, link building, and keyword optimization.'
     },
     {
+      id: 'branding',
       header: 'Branding',
       image: '/branding.png',
       alt: 'Branding, sunglasses placed in middle of table next to laptop and hat.',
@@ -44,8 +47,13 @@ const services = () => {
         'Your content will reach to your target audience and impact your business with measureable results. Your brand is you.'
     }
   ]
+  const serviceLinks = [
+    { href: '#design', name: 'Design & Development' },
+    { href: '#seo', name: 'SEO' },
+    { href: '#branding', name: 'Branding & Content' }
+  ]
   return (
-    <div className="bg-teal-50">
+    <div className="bg-black">
       <Head>
         <title>
           Services | Reliance Digital | Web Design, Development, SEO services |
@@ -58,8 +66,7 @@ const services = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       {/* Main Section */}
-      <main className="mt-28">
-        <h1 className="text-transparent">Our Services.</h1>
+      <main className="lg:mt-10 mt-28">
         {/* image container */}
         <motion.div
           className="relative"
@@ -68,25 +75,65 @@ const services = () => {
           transition={{ duration: 0.5 }}
         >
           <Image
-            src="/modern.jpg"
+            src="/peep.jpg"
             alt="About us. City background"
             layout="responsive"
-            height={600}
+            height={1000}
             width={1200}
             priority
             className="brightness-50"
           />
-          <h1 className=" text-white text-3xl sm:text-7xl centered space font-bold">
-            Our Services
-            <div className="sm:text-xl text-xs mt-10 tracking-wide font-thin">
-              <p>Web Design, Web Development, SEO Optimization, Branding.</p>
-              <p>Let&apos;s collaborate.</p>
-            </div>
-          </h1>
+          <div className="centered flex md:flex-row flex-col justify-evenly md:gap-20 lg:gap-80 w-full ">
+            <aside className="text-center lg:text-left lg:ml-5">
+              <p className="text-lg text-gray-300 font-thin tracking-widest ml-2 sm:hidden">
+                What we do.
+              </p>
+
+              <h1 className=" text-white text-2xl md:text-5xl lg:text-[5em]   font-thin">
+                We help{' '}
+                <span className="hover:text-teal-500 font-bold">create</span>{' '}
+                what you{' '}
+                <span className="hover:text-emerald-500 font-bold">
+                  envision
+                </span>
+              </h1>
+              <motion.h3
+                className="text-base md:text-md mt-2 sm:mt-10 tracking-[3px] font-light  text-gray-500"
+                initial={{ opacity: 0 }}
+                //animation of component appearence
+                animate={{
+                  opacity: 1
+                }}
+                transition={{ delay: 0.3 }}
+              >
+                RELIANCE DIGITAL CREATIVE
+              </motion.h3>
+            </aside>
+            {/* links container */}
+            <aside
+              className="md:text-4xl lg:text-7xl text-sm  tracking-wide 
+              font-extralight  flex sm:flex-col lg:justify-between justify-center mt-10 sm:mt-0 gap-5 "
+            >
+              <p className="text-lg text-gray-300 font-thin tracking-widest ml-2 hidden md:inline">
+                What we do.
+              </p>
+
+              {serviceLinks.map((link) => (
+                <a
+                  className="sm:hover:text-emerald-500  text-emerald-500 sm:text-gray-600 transition-all duration-500 flex"
+                  href={link.href}
+                  key={link.href}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </aside>
+          </div>
         </motion.div>
         {cardInfo.map((card) => (
           <div key={card.header}>
             <ServiceCard
+              id={card.id}
               header={card.header}
               image={card.image}
               altText={card.alt}

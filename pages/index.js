@@ -5,6 +5,7 @@ import HomeServices from '../components/home-components/HomeServices'
 import HomeFooter from '../components/home-components/HomeFooter'
 import HomeFaq from '../components/home-components/HomeFaq'
 import Link from 'next/link'
+import { HiOutlineChevronDoubleDown } from 'react-icons/Hi'
 export default function Home() {
   return (
     // fixed position of "scroll" causes issues with height
@@ -19,12 +20,17 @@ export default function Home() {
           content="Located in the San Francisco Bay Area, Reliance Digital Creative offers web design and development, SEO, branding and content writing services."
         />
       </Head>
-      <main className="p-8 sm:p-20  lg:flex  md:gap-24  sm:mt-16 mt-40 h-auto ">
+      <motion.main
+        className="p-8 flex gap-16 sm:gap-10 h-screen home flex-col justify-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <motion.h1
-          className="text-left flex items-center text-5xl 
-          md:text-7xl font-semibold mt-14 mb-10  sm:mb-0 
-           space 
-           bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-600 text-transparent"
+          className="text-left flex items-center text-5xl mt-80 sm:mt-96
+          md:text-6xl font-semibold 
+            sm:mb-14
+           text-white "
           initial={{ opacity: 0, x: -100 }}
           //animation of component appearence
           animate={{ opacity: 1, x: 0 }}
@@ -33,10 +39,15 @@ export default function Home() {
         >
           Design. Develop. Optimize.
         </motion.h1>
+
         {/* main section */}
-        <div className="sm:mt-40 mt-10">
+        <div className=" text-white sm:w-2/3 flex flex-col">
+          <a href="#dream" className="">
+            <HiOutlineChevronDoubleDown className="absolute bottom-0 text-center w-full left-0 right-0 text-3xl" />
+          </a>
+
           <motion.h2
-            className="text-lg md:text-2xl mt-5"
+            className="text-lg md:text-2xl"
             initial={{ opacity: 0 }}
             //animation of component appearence
             animate={{
@@ -56,37 +67,36 @@ export default function Home() {
               we are here for your business to achieve
               <span> growth and results</span>.
             </p>
-            <p className="mt-5 hover-underline-animation">
-              That&apos;s our bottom line.
-            </p>
+            <p className="mt-5">That&apos;s our bottom line.</p>
             <div className="mt-5">
               <Link href="/services">
-                <a className="border border-black p-2 hover:bg-emerald-300 transition-all text-xl rounded">
+                <a className="border border-white p-2 hover:bg-emerald-300 hover:border-black hover:text-black transition-all text-xl rounded">
                   Learn more about us
                 </a>
               </Link>
             </div>
           </motion.h2>
+
           <motion.h3
-            className="text-base md:text-md mt-10 text-stone-900 tracking-[3px] font-light"
-            initial={{ y: -100 }}
+            className="text-base md:text-md mt-10 tracking-[3px] font-light mb-40"
+            initial={{ opacity: 0 }}
             //animation of component appearence
             animate={{
-              y: 0
+              opacity: 1
             }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.3 }}
           >
             RELIANCE DIGITAL CREATIVE
           </motion.h3>
         </div>
-      </main>
-      <section>
+      </motion.main>
+      <section id="dream" className="border border-transparent">
         <HomeAbout />
       </section>
       <section>
         <HomeServices />
-      </section>
-      <section>
+      </section>{' '}
+      <section className="bg-black">
         <HomeFaq />
       </section>
       <section>
