@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import React from 'react'
 import { useState } from 'react'
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/Md'
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 
 const details = [
   {

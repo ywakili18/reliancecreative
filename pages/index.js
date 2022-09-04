@@ -5,7 +5,7 @@ import HomeServices from '../components/home-components/HomeServices'
 import HomeFooter from '../components/home-components/HomeFooter'
 import HomeFaq from '../components/home-components/HomeFaq'
 import Link from 'next/link'
-import { HiOutlineChevronDoubleDown } from 'react-icons/Hi'
+import { HiOutlineChevronDoubleDown } from 'react-icons/hi'
 export default function Home() {
   return (
     // fixed position of "scroll" causes issues with height
