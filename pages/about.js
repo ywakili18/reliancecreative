@@ -133,18 +133,18 @@ const about = () => {
           <div className="centered flex md:flex-row flex-col justify-evenly md:gap-20 lg:gap-80 w-full">
             <aside className="text-left lg:text-left lg:ml-5">
               <div className="flex flex-col text-white">
-                <p className="font-thin text-gray-200 mt-10 text-center text-base lg:text-4xl">
+                <p className=" text-gray-200 mt-10 text-center text-base lg:text-4xl">
                   Core Values
                 </p>
               </div>
             </aside>
           </div>
         </motion.div>
-        <div className="flex flex-col w-3/4 m-auto gap-5 text-white font-thin">
+        <div className="flex flex-col w-3/4 m-auto gap-5 text-white tracking-tight font-normal">
           <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start font-normal  tracking-tight">
             Satisfaction <VscWorkspaceTrusted className="mt-1 ml-1" />
           </h3>
-          <p className="text-sm sm:text-lg tracking-wide">
+          <p className="text-sm sm:text-lg">
             We are committed to satisfying our clients. Our approach is thorough
             and efficient. We take the time to fully understand each
             client&apos;s business needs, audience, and how it operates. Then we
@@ -152,18 +152,18 @@ const about = () => {
             launch the final product and look to evolve the brand for the
             future.
           </p>
-          <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start font-normal  tracking-tight">
+          <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start  tracking-tight">
             Quality <FiThumbsUp className="mt-1 ml-1" />
           </h3>
-          <p className="text-sm sm:text-lg tracking-wide">
+          <p className="text-sm sm:text-lg ">
             We are committed to the best quality for our clients. Each digital
             experience is built with thought of scale, responsiveness for any
             device, and efficiently deliver the product on time.
           </p>
-          <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start font-normal tracking-tight">
+          <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start  tracking-tight">
             Integrity <FaRegHandshake className="mt-1 ml-1" />
           </h3>
-          <p className="text-sm sm:text-lg tracking-wide">
+          <p className="text-sm sm:text-lg ">
             We are committed to respect, trust, and holding ourselves
             accountable to the highest standard. Honesty and transparency is
             incredibly important to us at Reliance Digital Creative - to ensure
