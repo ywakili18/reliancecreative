@@ -19,7 +19,8 @@ const about = () => {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className="mt-28">
+      <main className="lg:mt-[.05em]  mt-32 ">
+        {/* image container */}
         <motion.div
           className="relative"
           initial={{ opacity: 0 }}
@@ -28,78 +29,147 @@ const about = () => {
         >
           <Image
             src="/bayarea.jpg"
-            alt="About us. City background"
+            alt="gray abstract shapes"
             layout="responsive"
-            height={2000}
-            width={4000}
+            height={900}
+            width={1200}
+            priority
             className="brightness-50"
           />
-          <h1 className=" text-white text-3xl sm:text-7xl centered space font-bold">
-            About us
-            <div className="sm:text-xl text-xs mt-10 tracking-wide font-thin">
-              <p>We love creating digital experiences.</p>
-              <p>
-                Right here, in the heart of the Bay Area and Silicon Valley.
+
+          <div className="centered flex md:flex-row flex-col justify-evenly md:gap-20 lg:gap-80 w-full">
+            <aside className="text-center lg:text-left lg:ml-5">
+              <p className="text md:text-lg text-gray-300 tracking-wide ml-2 mb-5">
+                About us
               </p>
-            </div>
-          </h1>
-        </motion.div>
-        <motion.div className=" text-black h-auto md:w-1/2 m-auto p-10 md:p-20">
-          <h2 className="text-2xl sm:text-5xl text-emerald-400 font-bold space">
-            Who we are
-          </h2>
-          <div className="text-sm sm:text-lg mt-5 tracking-wide">
-            <p className="">
-              Reliance Digital Creative, founded in 2021, is located in the San
-              Francisco Bay Area, CA. Our team has over 10+ years specializing
-              in creating interactive experiences on the web - we simply love
-              what we do. Our focus is building scalable, high quality,
-              responsive sites to establish businesses and brands digitally.
-            </p>
-            <p className="mt-5">
-              We develop and design webflow and fully custom sites that tailors
-              to your business needs. Each site is also optimized for SEO and
-              accessibility, ensuring your brand is reached to your clients
-              effectively, increasing your engagement, sales, and profits.
-            </p>
+              <h1 className=" text-white text-2xl md:text-5xl lg:text-[5em]   font-thin">
+                Rooted in{' '}
+                <span className="hover:text-teal-500 font-bold transition-all">
+                  digital,
+                </span>{' '}
+                based out of the{' '}
+                <span className="hover:text-emerald-500 font-bold transition-all">
+                  Bay Area
+                </span>
+              </h1>
+              <motion.h3
+                className="text-sm md:text-md mt-5 sm:mt-10 tracking-[3px] font-light  text-gray-400"
+                initial={{ opacity: 0 }}
+                //animation of component appearence
+                animate={{
+                  opacity: 1
+                }}
+                transition={{ delay: 0.3 }}
+              >
+                RELIANCE DIGITAL CREATIVE
+              </motion.h3>
+            </aside>
           </div>
         </motion.div>
-        <motion.div className="bg-emerald-50 text-black h-auto sm:p-10">
-          <h2 className="text-center text-3xl sm:text-5xl text-emerald-400 font-bold p-10 space">
-            Our values
-          </h2>
-          <div className="flex flex-col w-3/4 m-auto gap-5">
-            <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
-              Satisfaction <VscWorkspaceTrusted className="mt-1 ml-1" />
-            </h3>
-            <p className="text-sm sm:text-lg tracking-wide">
-              We are committed to satisfying our clients. Our approach is
-              thorough and efficient. We take the time to fully understand each
-              client&apos;s business needs, audience, and how it operates. Then
-              we strategize and plan for executing site and brand launch.
-              Finally we launch the final product and look to evolve the brand
-              for the future.
-            </p>
-            <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
-              Quality <FiThumbsUp className="mt-1 ml-1" />
-            </h3>
-            <p className="text-sm sm:text-lg tracking-wide">
-              We are committed to the best quality for our clients. Each digital
-              experience is built with thought of scale, responsiveness for any
-              device, and efficiently deliver the product on time.
-            </p>
-            <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start">
-              Integrity <FaRegHandshake className="mt-1 ml-1" />
-            </h3>
-            <p className="text-sm sm:text-lg tracking-wide">
-              We are committed to respect, trust, and holding ourselves
-              accountable to the highest standard. Honesty and transparency is
-              incredibly important to us at Reliance Digital Creative - to
-              ensure you have faith in us to deliver the best product possible.
-            </p>
-            <div className="p-10"></div>
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src="/modern.jpg"
+            alt="gray abstract shapes"
+            layout="responsive"
+            height={900}
+            width={1200}
+            priority
+            className="brightness-50"
+          />
+
+          <div className="centered flex md:flex-row flex-col justify-evenly md:gap-20 lg:gap-80 w-full">
+            <aside className="text-left lg:text-left lg:ml-5">
+              <div className="flex flex-col text-white">
+                <p className="font-thin text-gray-200 mt-10 text-center text-base lg:text-4xl">
+                  Our history
+                </p>
+                <div className="text-xs sm:text-xl lg:text-3xl w-3/4 sm:w-1/2 m-auto flex flex-col gap-5 font-thin ">
+                  {' '}
+                  <p className="mt-5">
+                    Reliance Digital Creative, founded in 2021, is located in
+                    the{' '}
+                    <span className="font-normal hover:text-emerald-500 tracking-tighter transition-all">
+                      San Francisco Bay Area, CA.
+                    </span>{' '}
+                    Our team has over 10+ years specializing in creating
+                    interactive experiences on the web - we simply love what we
+                    do.
+                  </p>
+                  <p>
+                    Our focus is building scalable, high quality, responsive
+                    sites to establish businesses and brands digitally. We
+                    develop and design webflow and fully custom sites that
+                    tailors to your business needs. Each site is also optimized
+                    for SEO and accessibility, ensuring your brand is reached to
+                    your clients effectively, increasing your engagement, sales,
+                    and profits.
+                  </p>
+                </div>
+              </div>
+            </aside>
           </div>
         </motion.div>
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src="/minpeople.jpg"
+            alt="gray abstract shapes"
+            layout="responsive"
+            height={900}
+            width={1200}
+            priority
+            className="brightness-50"
+          />
+
+          <div className="centered flex md:flex-row flex-col justify-evenly md:gap-20 lg:gap-80 w-full">
+            <aside className="text-left lg:text-left lg:ml-5">
+              <div className="flex flex-col text-white">
+                <p className="font-thin text-gray-200 mt-10 text-center text-base lg:text-4xl">
+                  Core Values
+                </p>
+              </div>
+            </aside>
+          </div>
+        </motion.div>
+        <div className="flex flex-col w-3/4 m-auto gap-5 text-white font-thin">
+          <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start font-normal  tracking-tight">
+            Satisfaction <VscWorkspaceTrusted className="mt-1 ml-1" />
+          </h3>
+          <p className="text-sm sm:text-lg tracking-wide">
+            We are committed to satisfying our clients. Our approach is thorough
+            and efficient. We take the time to fully understand each
+            client&apos;s business needs, audience, and how it operates. Then we
+            strategize and plan for executing site and brand launch. Finally we
+            launch the final product and look to evolve the brand for the
+            future.
+          </p>
+          <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start font-normal  tracking-tight">
+            Quality <FiThumbsUp className="mt-1 ml-1" />
+          </h3>
+          <p className="text-sm sm:text-lg tracking-wide">
+            We are committed to the best quality for our clients. Each digital
+            experience is built with thought of scale, responsiveness for any
+            device, and efficiently deliver the product on time.
+          </p>
+          <h3 className="flex gap-1 text-lg sm:text-2xl justify-center md:justify-start font-normal tracking-tight">
+            Integrity <FaRegHandshake className="mt-1 ml-1" />
+          </h3>
+          <p className="text-sm sm:text-lg tracking-wide">
+            We are committed to respect, trust, and holding ourselves
+            accountable to the highest standard. Honesty and transparency is
+            incredibly important to us at Reliance Digital Creative - to ensure
+            you have faith in us to deliver the best product possible.
+          </p>
+        </div>
       </main>
     </motion.div>
   )

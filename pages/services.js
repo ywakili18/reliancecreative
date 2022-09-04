@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import ServiceCard from '../components/services-components/ServiceCard'
+import ServiceDesign from '../components/services-components/ServiceDesign'
+import SeoDesign from '../components/services-components/SeoDesign'
+import BrandDesign from '../components/services-components/BrandDesign'
+import HomeFooter from '../components/home-components/HomeFooter'
 const services = () => {
   const cardInfo = [
     {
@@ -66,7 +69,7 @@ const services = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       {/* Main Section */}
-      <main className="lg:mt-10 mt-28">
+      <main className="lg:mt-10  mt-28">
         {/* image container */}
         <motion.div
           className="relative"
@@ -76,9 +79,9 @@ const services = () => {
         >
           <Image
             src="/peep.jpg"
-            alt="About us. City background"
+            alt="gray abstract shapes"
             layout="responsive"
-            height={1000}
+            height={900}
             width={1200}
             priority
             className="brightness-50"
@@ -91,9 +94,11 @@ const services = () => {
 
               <h1 className=" text-white text-2xl md:text-5xl lg:text-[5em]   font-thin">
                 We help{' '}
-                <span className="hover:text-teal-500 font-bold">create</span>{' '}
+                <span className="hover:text-teal-500 font-bold transition-all">
+                  create
+                </span>{' '}
                 what you{' '}
-                <span className="hover:text-emerald-500 font-bold">
+                <span className="hover:text-emerald-500 font-bold transition-all">
                   envision
                 </span>
               </h1>
@@ -111,7 +116,7 @@ const services = () => {
             </aside>
             {/* links container */}
             <aside
-              className="md:text-4xl lg:text-7xl text-sm  tracking-wide 
+              className="md:text-4xl lg:text-6xl text-sm  tracking-wide 
               font-extralight  flex sm:flex-col lg:justify-between justify-center mt-10 sm:mt-0 gap-5 "
             >
               <p className="text-lg text-gray-300 font-thin tracking-widest ml-2 hidden md:inline">
@@ -130,22 +135,11 @@ const services = () => {
             </aside>
           </div>
         </motion.div>
-        {cardInfo.map((card) => (
-          <div key={card.header}>
-            <ServiceCard
-              id={card.id}
-              header={card.header}
-              image={card.image}
-              altText={card.alt}
-              buttonText={card.buttonText}
-              first={card.first}
-              second={card.second}
-              third={card.third}
-              fourth={card.fourth}
-            />
-          </div>
-        ))}
       </main>
+      <ServiceDesign />
+      <SeoDesign />
+      <BrandDesign />
+      <HomeFooter />
     </div>
   )
 }

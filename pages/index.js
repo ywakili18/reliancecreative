@@ -28,7 +28,7 @@ export default function Home() {
       >
         <motion.h1
           className="text-left flex items-center text-5xl mt-80 sm:mt-96
-          md:text-6xl font-semibold 
+          md:text-7xl font-semibold 
             sm:mb-14
            text-white "
           initial={{ opacity: 0, x: -100 }}
@@ -42,10 +42,6 @@ export default function Home() {
 
         {/* main section */}
         <div className=" text-white sm:w-2/3 flex flex-col">
-          <a href="#dream" className="">
-            <HiOutlineChevronDoubleDown className="absolute bottom-0 text-center w-full left-0 right-0 text-3xl" />
-          </a>
-
           <motion.h2
             className="text-lg md:text-2xl"
             initial={{ opacity: 0 }}
@@ -70,7 +66,7 @@ export default function Home() {
             <p className="mt-5">That&apos;s our bottom line.</p>
             <div className="mt-5">
               <Link href="/services">
-                <a className="border border-white p-2 hover:bg-emerald-300 hover:border-black hover:text-black transition-all text-xl rounded">
+                <a className="border border-white p-2 hover:bg-white hover:border-black hover:text-black transition-all text-xl">
                   Learn more about us
                 </a>
               </Link>
