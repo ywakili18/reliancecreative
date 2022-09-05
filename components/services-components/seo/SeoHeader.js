@@ -19,6 +19,7 @@ const SeoHeader = () => {
           width={'100%'}
           objectFit="cover"
           src="/seo.jpg"
+          priority
         ></Image>
       </div>
     </section>

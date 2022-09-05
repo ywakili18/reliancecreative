@@ -19,6 +19,7 @@ const BrandHeader = () => {
           width={'100%'}
           objectFit="cover"
           src="/branding.jpg"
+          priority
         ></Image>
       </div>
     </section>

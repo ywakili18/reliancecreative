@@ -21,6 +21,7 @@ const HomeServices = () => {
             height={2000}
             layout="responsive"
             className="rounded"
+            priority
           />
         </motion.div>
         {/* text */}

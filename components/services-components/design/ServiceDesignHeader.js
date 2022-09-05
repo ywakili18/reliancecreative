@@ -22,6 +22,7 @@ const ServiceDesignHeader = () => {
           width={'100%'}
           objectFit="cover"
           src="/people.jpg"
+          priority
         ></Image>
       </div>
     </section>

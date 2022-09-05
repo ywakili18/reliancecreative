@@ -27,6 +27,7 @@ const SeoFacts = () => {
           height={'100%'}
           width={'100%'}
           objectFit="contain"
+          priority
         />
       </aside>
     </section>

@@ -30,6 +30,7 @@ const ServiceDesignFacts = () => {
           height={'100%'}
           width={'100%'}
           objectFit="contain"
+          priority
         />
       </aside>
     </section>
