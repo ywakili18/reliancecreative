@@ -1,7 +1,7 @@
 import Image from 'next/image'
 const ServiceDesignFacts = () => {
   const designServices = [
-    { name: 'Reponsive Design' },
+    { name: 'Responsive Design' },
     { name: 'Moodboards' },
     { name: 'Site Architecture' },
     { name: 'Wireframing' },
