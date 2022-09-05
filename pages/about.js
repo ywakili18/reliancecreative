@@ -67,25 +67,14 @@ const about = () => {
           </div>
         </motion.div>
         <motion.div
-          className="relative"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Image
-            src="/modern.jpg"
-            alt="gray abstract shapes"
-            layout="responsive"
-            height={900}
-            width={1200}
-            priority
-            className="brightness-50"
-          />
-
-          <div className="centered flex md:flex-row flex-col justify-evenly md:gap-20 lg:gap-80 w-full">
+          <div className="flex md:flex-row flex-col justify-evenly md:gap-20 lg:gap-80 w-full">
             <aside className="text-left lg:text-left lg:ml-5">
-              <div className="flex flex-col text-white">
-                <p className="font-thin text-gray-200 mt-10 text-center text-base lg:text-4xl">
+              <div className="flex flex-col text-white items-center">
+                <p className="font-thin text-gray-200 mt-10  text-base lg:text-4xl">
                   Our history
                 </p>
                 <div className="text-xs sm:text-xl lg:text-3xl w-3/4 sm:w-1/2 m-auto flex flex-col gap-5 font-thin ">
@@ -101,13 +90,17 @@ const about = () => {
                     do.
                   </p>
                   <p>
-                    Our focus is building scalable, high quality, responsive
-                    sites to establish businesses and brands digitally. We
-                    develop and design webflow and fully custom sites that
+                    <span className="font-bold">
+                      Our focus is building scalable, high quality, responsive
+                      sites to establish businesses and brands digitally.
+                    </span>{' '}
+                    We develop and design webflow and fully custom sites that
                     tailors to your business needs. Each site is also optimized
                     for SEO and accessibility, ensuring your brand is reached to
-                    your clients effectively, increasing your engagement, sales,
-                    and profits.
+                    your clients effectively,{' '}
+                    <span className="font-bold">
+                      increasing your engagement, sales, and profits.
+                    </span>
                   </p>
                 </div>
               </div>
