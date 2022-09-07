@@ -9,7 +9,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;  
   background-color: black;
-  scroll-behavior: smooth;
+  
 }
 
 ::-webkit-scrollbar {

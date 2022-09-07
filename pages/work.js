@@ -16,6 +16,9 @@ const work = () => {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <h1 className="text-center font-bold text-3xl sm:text-5xl mb-10">
+        <span className="font-thin">Recent</span> Work
+      </h1>
       <WorkCard />
     </div>
   )

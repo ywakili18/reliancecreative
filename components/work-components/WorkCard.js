@@ -38,7 +38,7 @@ const WorkCard = () => {
               {project.description}
             </p>
             <Link href={project.href}>
-              <button className="border border-black m-auto text-black w-1/3 p-1 text-lg font-medium hover:text-white hover:bg-black transition-all">
+              <button className="border border-black m-auto text-black w-1/3 p-1 text-sm sm:text-lg font-medium hover:text-white hover:bg-black transition-all">
                 View more
               </button>
             </Link>
