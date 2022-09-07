@@ -78,7 +78,10 @@ const vush = () => {
             </div>
           </div>
 
-          <WorkImage alt="screen shot of munchiez app" image="/thomason1.png" />
+          <WorkImage
+            alt="screen shot of munchiez app"
+            image="/thomason1.webp"
+          />
         </div>
       </div>
     </div>

@@ -83,7 +83,7 @@ const munchiez = () => {
 
           <WorkImage
             alt="screen shot of munchiez app"
-            image="/longMunchiez.png"
+            image="/longMunchiez.webp"
           />
         </div>
       </div>

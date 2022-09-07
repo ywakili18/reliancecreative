@@ -4,21 +4,21 @@ import Link from 'next/link'
 const WorkCard = () => {
   const projectDetails = [
     {
-      image: '/munchiez.png',
+      image: '/munchiez.webp',
       header: 'Munchiez',
       description: 'Landing page for food service delivery app.',
       href: '/work/munchiez',
       alt: 'Screenshot of munchiez app'
     },
     {
-      image: 'regVush.png',
+      image: 'regVush.webp',
       header: 'Vush',
       description: 'E-Commerce platform for footwear.',
       href: '/work/vush',
       alt: 'Screenshot of munchiez app'
     },
     {
-      image: 'thomason.png',
+      image: 'thomason.webp',
       header: 'Thomason Real Estate Group',
       description:
         'Real Estate Agency serving the Los Angeles County and California market.',

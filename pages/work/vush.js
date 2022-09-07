@@ -77,7 +77,7 @@ const vush = () => {
             </div>
           </div>
 
-          <WorkImage alt="screen shot of munchiez app" image="/vush.png" />
+          <WorkImage alt="screen shot of vush app" image="/vush.webp" />
         </div>
       </div>
     </div>
