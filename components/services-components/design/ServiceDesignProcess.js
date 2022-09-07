@@ -1,4 +1,5 @@
 import Button from '../../Button'
+import Link from 'next/link'
 const ServiceDesignProcess = () => {
   return (
     <section className="p-5 text-white flex flex-col gap-5 mt-28 lg:mt-48 lg:ml-20">
@@ -17,7 +18,9 @@ const ServiceDesignProcess = () => {
         work well on all devices and for all users.
       </p>
       <div>
-        <Button text="View our work" />
+        <Link href="/work">
+          <Button text="View our work" />
+        </Link>
       </div>
     </section>
   )
