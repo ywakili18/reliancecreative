@@ -10,8 +10,7 @@ function MyApp({ Component, pageProps, router }) {
     <div>
       <Head>
         <title>
-          Reliance Digital Creative | Web Design, Development, SEO services |
-          Branding Located in the San Francisco Bay Area | Silicon Valley
+          Reliance Digital Creative | Web Design, Development, SEO | Bay Area
         </title>
         <meta
           name="description"

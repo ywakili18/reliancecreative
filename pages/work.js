@@ -7,8 +7,6 @@ const work = () => {
       <Head>
         <title>
           Work | Reliance Digital Creative | Web Design, Development, SEO
-          services | Branding Located in the San Francisco Bay Area | Silicon
-          Valley.
         </title>
         <meta
           name="description"
