@@ -10,8 +10,9 @@ const about = () => {
     <motion.div className="">
       <Head>
         <title>
-          About | Reliance Digital | Web Design, Development, SEO services |
-          Branding Located in the San Francisco Bay Area | Silicon Valley.
+          About | Reliance Digital Creative| Web Design, Development, SEO
+          services | Branding Located in the San Francisco Bay Area | Silicon
+          Valley.
         </title>
         <meta
           name="description"

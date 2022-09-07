@@ -11,8 +11,9 @@ import { useState, useEffect } from 'react'
 const navigation = [
   { name: 'Home', href: '/', number: '01' },
   { name: 'Services', href: '/services', number: '02' },
-  { name: 'Contact', href: '/contact', number: '03' },
-  { name: 'About', href: '/about', number: '04' }
+  { name: 'Work', href: '/work', number: '03' },
+  { name: 'About', href: '/about', number: '04' },
+  { name: 'Contact', href: '/contact', number: '05' }
 ]
 
 export default function NavBar() {
@@ -80,7 +81,7 @@ export default function NavBar() {
             />
           </a>
         </Link>
-        <div className="md:flex text-2xl  items-center gap-20 hidden">
+        <div className="md:flex text-xl  items-center gap-20 hidden">
           {navigation.map((link) => (
             <Link key={link.name} href={link.href}>
               <motion.a className="hover-underline-animation cursor-pointer">
@@ -134,7 +135,7 @@ export default function NavBar() {
               animate="open"
               exit="closed"
               variants={sideVariants}
-              className="flex flex-col gap-10 text-3xl"
+              className="flex flex-col gap-10 text-2xl"
             >
               {navigation.map((link) => (
                 <Link key={link.name} href={link.href}>
