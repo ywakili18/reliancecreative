@@ -9,9 +9,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <div>
       <Head>
-        <title>
-          Reliance Digital Creative | Web Design, Development, SEO | Bay Area
-        </title>
+        <title>Reliance Digital Creative | Web Design, Development, SEO</title>
         <meta
           name="description"
           content="Located in the San Francisco Bay Area, Reliance Digital Creative offers web design and development, SEO, branding and content writing services."
