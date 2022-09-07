@@ -143,6 +143,7 @@ export default function NavBar() {
                     onClick={onClick}
                     variants={itemVariants}
                     className=" cursor-pointer"
+                    rel="nofollow"
                   >
                     <p className="text-sm">{link.number}</p>
                     {link.name}
