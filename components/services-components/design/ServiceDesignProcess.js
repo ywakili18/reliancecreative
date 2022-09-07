@@ -19,7 +19,10 @@ const ServiceDesignProcess = () => {
       </p>
       <div>
         <Link href="/work">
-          <Button text="View our work" />
+          <a href="">
+            {' '}
+            <Button text="View our work" />
+          </a>
         </Link>
       </div>
     </section>
