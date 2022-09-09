@@ -4,6 +4,13 @@ import Link from 'next/link'
 const WorkCard = () => {
   const projectDetails = [
     {
+      image: '/vincent.webp',
+      header: 'Vincent Robertson, lawyer',
+      description: 'Landing page for laywer based in Los Angeles.',
+      href: '/work/vincent',
+      alt: 'Screenshot of vincent law website'
+    },
+    {
       image: '/munchiez.webp',
       header: 'Munchiez',
       description: 'Landing page for food service delivery app.',
@@ -15,7 +22,7 @@ const WorkCard = () => {
       header: 'Vush',
       description: 'E-Commerce platform for footwear.',
       href: '/work/vush',
-      alt: 'Screenshot of munchiez app'
+      alt: 'Screenshot of vush app'
     },
     {
       image: 'thomason.webp',

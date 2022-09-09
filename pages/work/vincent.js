@@ -4,7 +4,7 @@ import WorkImage from '../../components/work-components/WorkImage'
 import Head from 'next/head'
 import { Breadcrumb } from 'flowbite-react'
 import { HiHome } from 'react-icons/hi'
-const vush = () => {
+const vincent = () => {
   return (
     <div className="mt-40">
       <div className="lg:ml-14 mb-10 ml-2">
@@ -16,19 +16,19 @@ const vush = () => {
             {' '}
             <span className="text-white hover:text-gray-400">Work</span>
           </Breadcrumb.Item>
-          <Breadcrumb.Item>Thomason Real Estate</Breadcrumb.Item>
+          <Breadcrumb.Item>Vincent Robertson Law</Breadcrumb.Item>
         </Breadcrumb>
       </div>
 
       <Head>
         <title>
-          Work - Thomason Realty Group | Reliance Digital Creative | Web Design,
+          Work - Vincent Robertson | Reliance Digital Creative | Web Design,
           Development, SEO services | Branding Located in the San Francisco Bay
           Area | Silicon Valley.
         </title>
         <meta
           name="description"
-          content="Reliance Digital Creative: Work - Thomason Realty Group, a web design project for a Real Estate Agency based company based out of the SF Bay Area. Reliance Digital Creative offers Web Design, SEO, Web Development, Branding, and Content writing services for your business."
+          content="Reliance Digital Creative: Work - Vincent Robertson, a web design project for a lawyer based company based out of Los Angeles County. Reliance Digital Creative offers Web Design, SEO, Web Development, Branding, and Content writing services for your business."
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
@@ -38,8 +38,8 @@ const vush = () => {
           {/* header */}
           <div className="lg:w-1/2 p-2 flex flex-col  lg:items-start justify-between md:justify-start gap-10 md:mt-10">
             <h1 className=" font-bold text-3xl lg:text-5xl ">
-              Thomason Real Estate Group,{' '}
-              <span className="font-light">Real Estate Agency</span>
+              Vincent Robertson{' '}
+              <span className="font-light">Business law.</span>
             </h1>
             {/* details - project type*/}
             <div className="flex flex-col w-full">
@@ -59,9 +59,8 @@ const vush = () => {
                 Project Details
               </h2>
               <p className="font-thin lg:text-xl mt-2">
-                Thomason Real Estate group sells modern, trendy, and
-                contemporary homes throughout the United States and Los Angeles
-                Area.
+                Vincent Robertson, a lawyer based out of the LA area, practicing
+                business and entertainment law.
               </p>
             </div>
             <div className="">
@@ -78,14 +77,11 @@ const vush = () => {
             </div>
           </div>
 
-          <WorkImage
-            alt="screen shot of munchiez app"
-            image="/thomason1.webp"
-          />
+          <WorkImage alt="screen shot of munchiez app" image="/vincentk.webp" />
         </div>
       </div>
     </div>
   )
 }
 
-export default vush
+export default vincent
