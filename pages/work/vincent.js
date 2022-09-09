@@ -1,9 +1,10 @@
-import React from 'react'
 import Link from 'next/link'
 import WorkImage from '../../components/work-components/WorkImage'
 import Head from 'next/head'
+import { ColorRing } from 'react-loader-spinner'
 import { Breadcrumb } from 'flowbite-react'
 import { HiHome } from 'react-icons/hi'
+
 const vincent = () => {
   return (
     <div className="mt-40">

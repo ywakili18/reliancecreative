@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import WorkImage from '../../components/work-components/WorkImage'
 import Head from 'next/head'

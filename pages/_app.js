@@ -2,9 +2,14 @@ import '../styles/globals.css'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { ColorRing } from 'react-loader-spinner'
+import { useState, useEffect } from 'react'
+
 function MyApp({ Component, pageProps, router }) {
-  const { asPath } = useRouter()
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000)
+  }, [])
 
   return (
     <div>
@@ -16,9 +21,24 @@ function MyApp({ Component, pageProps, router }) {
         />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <NavBar />
-      <Component {...pageProps} key={router.route} />
-      <Footer />
+
+      {!loading ? (
+        <>
+          <NavBar />
+          <Component {...pageProps} key={router.route} />
+          <Footer />
+        </>
+      ) : (
+        <ColorRing
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="blocks-loading"
+          wrapperStyle={{}}
+          wrapperClass="blocks-wrapper"
+          colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+        />
+      )}
     </div>
   )
 }

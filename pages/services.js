@@ -5,6 +5,7 @@ import ServiceDesign from '../components/services-components/ServiceDesign'
 import SeoDesign from '../components/services-components/SeoDesign'
 import BrandDesign from '../components/services-components/BrandDesign'
 import HomeFooter from '../components/home-components/HomeFooter'
+import { useState, useEffect } from 'react'
 const services = () => {
   const cardInfo = [
     {
@@ -55,6 +56,7 @@ const services = () => {
     { href: '#seo', name: 'SEO' },
     { href: '#branding', name: 'Branding & Content' }
   ]
+
   return (
     <div className="bg-black">
       <Head>
