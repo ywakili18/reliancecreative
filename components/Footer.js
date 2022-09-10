@@ -13,13 +13,13 @@ const Footer = () => {
         All Rights Reserved.
       </span>
       <ul className="flex gap-10 justify-center ">
-        <Link href="/about">
+        <Link href="/About">
           <a className="hover:text-green-500 transition-all">About</a>
         </Link>
-        <Link href="/services">
+        <Link href="/Services">
           <a className="hover:text-green-500 transition-all">Services</a>
         </Link>
-        <Link href="/contact">
+        <Link href="/Contact">
           <a className="hover:text-green-500 transition-all">Contact</a>
         </Link>
         <a

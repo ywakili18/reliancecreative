@@ -64,7 +64,7 @@ export default function Home() {
             </p>
             <p className="mt-5">That&apos;s our bottom line.</p>
             <div className="mt-5">
-              <Link href="/services">
+              <Link href="/Services">
                 <a className="border border-white p-2 hover:bg-white hover:border-black hover:text-black transition-all text-xl">
                   Learn more about us
                 </a>
