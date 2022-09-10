@@ -44,7 +44,7 @@ const HomeAbout = () => {
             We position your core values and ideas to the forefront, connecting
             to your clients and ideal audience.
           </p>
-          <Link href="/Contact">
+          <Link href="/contact">
             <a className="">
               <Button text="Let's chat!" />
             </a>

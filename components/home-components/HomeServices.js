@@ -47,7 +47,7 @@ const HomeServices = () => {
             needing a redesign, or starting from scratch: we are here to make
             that happen on <span className="font-bold"> any device.</span>
           </p>
-          <Link href="/Services">
+          <Link href="/services">
             <a className="">
               <Button text="See our services." />
             </a>
