@@ -10,10 +10,10 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 const navigation = [
   { name: 'Home', href: '/', number: '01' },
-  { name: 'Services', href: '/services', number: '02' },
-  { name: 'Work', href: '/work', number: '03' },
-  { name: 'About', href: '/about', number: '04' },
-  { name: 'Contact', href: '/contact', number: '05' }
+  { name: 'Services', href: '/Services', number: '02' },
+  { name: 'Work', href: '/Work', number: '03' },
+  { name: 'About', href: '/About', number: '04' },
+  { name: 'Contact', href: '/Contact', number: '05' }
 ]
 
 export default function NavBar() {

@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-const contact = () => {
+import { useRouter } from 'next/router'
+const Contact = () => {
+  const router = useRouter()
   const divStyle = {
     display: 'none'
   }
+
   return (
     <div className="lg:flex gap-20">
       {' '}
@@ -44,6 +47,11 @@ const contact = () => {
           method="POST"
           className="w-5/6 m-auto sm:w-full"
         >
+          <input
+            type="hidden"
+            name="_next"
+            value="https://reliancedm.com/ThankYou"
+          />
           <div className="flex flex-col md:gap-6 mt-10">
             <input type="text" name="_honey" style={divStyle} />
           </div>
@@ -145,4 +153,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

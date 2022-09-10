@@ -6,7 +6,7 @@ import SeoDesign from '../components/services-components/SeoDesign'
 import BrandDesign from '../components/services-components/BrandDesign'
 import HomeFooter from '../components/home-components/HomeFooter'
 import { useState, useEffect } from 'react'
-const services = () => {
+const Services = () => {
   const cardInfo = [
     {
       id: 'design',
@@ -145,4 +145,4 @@ const services = () => {
   )
 }
 
-export default services
+export default Services

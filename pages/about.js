@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { VscWorkspaceTrusted } from 'react-icons/vsc'
 import { FiThumbsUp } from 'react-icons/fi'
 import { FaRegHandshake } from 'react-icons/fa'
-const about = () => {
+const About = () => {
   return (
     <motion.div className="">
       <Head>
@@ -167,4 +167,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About

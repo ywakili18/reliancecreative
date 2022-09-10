@@ -1,7 +1,7 @@
 import React from 'react'
 import WorkCard from '../components/work-components/WorkCard'
 import Head from 'next/head'
-const work = () => {
+const Work = () => {
   return (
     <div className="mt-40 text-white">
       <Head>
@@ -22,4 +22,4 @@ const work = () => {
   )
 }
 
-export default work
+export default Work
