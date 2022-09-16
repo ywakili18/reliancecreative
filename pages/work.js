@@ -1,9 +1,14 @@
 import React from 'react'
 import WorkCard from '../components/work-components/WorkCard'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 const Work = () => {
   return (
-    <div className="mt-40 text-white">
+    <motion.div
+      className="mt-40 text-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <Head>
         <title>
           Work | Reliance Digital Creative | Web Design, Development, SEO
@@ -18,7 +23,7 @@ const Work = () => {
         <span className="font-thin">Recent</span> Work
       </h1>
       <WorkCard />
-    </div>
+    </motion.div>
   )
 }
 
