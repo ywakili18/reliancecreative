@@ -5,7 +5,6 @@ import HomeServices from '../components/home-components/HomeServices'
 import HomeFooter from '../components/home-components/HomeFooter'
 import HomeFaq from '../components/home-components/HomeFaq'
 import Link from 'next/link'
-import { HiOutlineChevronDoubleDown } from 'react-icons/hi'
 export default function Home() {
   return (
     // fixed position of "scroll" causes issues with height
@@ -30,11 +29,11 @@ export default function Home() {
           md:text-7xl font-semibold 
             sm:mb-14
            text-white "
-          initial={{ opacity: 0, x: -100 }}
+          initial={{ opacity: 0, y: -20 }}
           //animation of component appearence
-          animate={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           // how your element will appears f.e(duration in seconds)
-          transition={{ delay: 0.5 }}
+          transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }}
         >
           Design. Develop. Optimize.
         </motion.h1>
@@ -49,7 +48,7 @@ export default function Home() {
               opacity: 1
             }}
             // how your element will appears f.e(duration in seconds)
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 1 }}
           >
             <span>
               <span className="font-bold ">

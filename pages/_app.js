@@ -4,10 +4,11 @@ import Footer from '../components/Footer'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import TextReveal from '../components/TextReveal'
+
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    setTimeout(() => setLoading(false), 4000)
+    setTimeout(() => setLoading(false), 1900)
   }, [])
 
   return (

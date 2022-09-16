@@ -5,7 +5,9 @@ import { motion } from 'framer-motion'
 const Wrapper = (props) => {
   // We'll do this to prevent wrapping of words using CSS
   return (
-    <span className="text-2xl md:text-6xl font-thin">{props.children}</span>
+    <span className="text-xl md:text-6xl font-extralight">
+      {props.children}
+    </span>
   )
 }
 

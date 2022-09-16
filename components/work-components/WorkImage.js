@@ -2,11 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { CirclesWithBar } from 'react-loader-spinner'
+import { RotatingLines } from 'react-loader-spinner'
 const WorkImage = ({ alt, image }) => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000)
+    setTimeout(() => setLoading(false), 1500)
   }, [])
   return (
     <div>
@@ -27,17 +27,12 @@ const WorkImage = ({ alt, image }) => {
           :
         </motion.div>
       ) : (
-        <CirclesWithBar
-          height="500"
-          width="100"
-          color="#4fa94d"
-          wrapperStyle={{}}
-          wrapperClass=""
+        <RotatingLines
+          strokeColor="grey"
+          strokeWidth="5"
+          animationDuration="0.75"
+          width="96"
           visible={true}
-          outerCircleColor=""
-          innerCircleColor=""
-          barColor=""
-          ariaLabel="circles-with-bar-loading"
         />
       )}
     </div>

@@ -10,13 +10,21 @@ const vincent = () => {
     <div className="mt-40">
       <div className="lg:ml-14 mb-10 ml-2">
         <Breadcrumb aria-label="Default breadcrumb example">
-          <Breadcrumb.Item href="/" icon={HiHome}>
-            <span className="text-white hover:text-gray-400">Home</span>
-          </Breadcrumb.Item>
-          <Breadcrumb.Item href="/work">
-            {' '}
-            <span className="text-white hover:text-gray-400">Work</span>
-          </Breadcrumb.Item>
+          <Link href="/">
+            <Breadcrumb.Item icon={HiHome}>
+              <span className="text-white hover:text-gray-400 cursor-pointer">
+                Home
+              </span>
+            </Breadcrumb.Item>
+          </Link>
+          <Link href="/work">
+            <Breadcrumb.Item>
+              {' '}
+              <span className="text-white hover:text-gray-400 cursor-pointer">
+                Work
+              </span>
+            </Breadcrumb.Item>
+          </Link>
           <Breadcrumb.Item>Vincent Robertson Law</Breadcrumb.Item>
         </Breadcrumb>
       </div>
